@@ -558,23 +558,25 @@ function initializeCharts() {
   if (speciesChart) speciesChart.destroy();
   if (benefitsChart) benefitsChart.destroy();
   
-  // Gráfica de distribución por especies del parque
+  // Gráfica de distribución por especies del parque (actualizada)
   const speciesCtx = document.getElementById('speciesChart').getContext('2d');
   speciesChart = new Chart(speciesCtx, {
     type: 'doughnut',
     data: {
-      labels: ['Mezquite', 'Palo Verde', 'Encino', 'Willow del Desierto', 'Ironwood'],
+      labels: ['Mezquite', 'Palo Verde', 'Encino', 'Willow del Desierto', 'Ironwood', 'Palo Fierro'],
       datasets: [{
-        data: [1, 1, 1, 2, 1], // Basado en los datos del GeoJSON
+        data: [2, 1, 1, 2, 1, 1], // Basado en los datos actualizados del GeoJSON
         backgroundColor: [
           '#8B5A3C',
           '#9CAF88',
           '#2D5016',
           '#A4C3B2',
-          '#6B9080'
+          '#6B9080',
+          '#8B5A3C'
         ],
         borderWidth: 3,
-        borderColor: '#FEFCF3'
+        borderColor: '#FEFCF3',
+        hoverOffset: 6
       }]
     },
     options: {
@@ -586,17 +588,17 @@ function initializeCharts() {
           labels: {
             color: '#FEFCF3',
             font: {
-              size: 11,
+              size: 10,
               weight: '500'
             },
-            padding: 12,
+            padding: 8,
             usePointStyle: true,
             pointStyle: 'circle'
           }
         },
         title: {
           display: true,
-          text: 'Distribución por Especies',
+          text: 'Distribución por Especies del Parque',
           color: '#FEFCF3',
           font: {
             size: 12,
@@ -607,27 +609,31 @@ function initializeCharts() {
     }
   });
 
-  // Gráfica de beneficios totales del parque
+  // Gráfica de beneficios totales del parque (mejorada)
   const benefitsCtx = document.getElementById('benefitsChart').getContext('2d');
   benefitsChart = new Chart(benefitsCtx, {
     type: 'bar',
     data: {
-      labels: ['Agua', 'Energía', 'Aire Limpio'],
+      labels: ['Agua', 'Energía', 'Aire', 'Oxígeno', 'Carbono'],
       datasets: [{
         label: 'Beneficios Totales ($MXN)',
-        data: [3200, 5800, 1400], // Estimación total del parque
+        data: [4800, 8200, 2100, 1800, 650], // Estimación mejorada total del parque
         backgroundColor: [
           '#5DADE2',
           '#F39C12', 
-          '#A4C3B2'
+          '#A4C3B2',
+          '#58D68D',
+          '#8B4513'
         ],
         borderColor: [
           '#3498DB',
           '#E67E22',
-          '#6B9080'
+          '#6B9080',
+          '#27AE60',
+          '#A0522D'
         ],
         borderWidth: 2,
-        borderRadius: 6,
+        borderRadius: 8,
         borderSkipped: false,
       }]
     },
@@ -640,11 +646,21 @@ function initializeCharts() {
         },
         title: {
           display: true,
-          text: 'Beneficios Totales del Parque',
+          text: 'Beneficios Totales del Parque Madero',
           color: '#FEFCF3',
           font: {
             size: 12,
             weight: '600'
+          }
+        },
+        tooltip: {
+          backgroundColor: 'rgba(0,0,0,0.8)',
+          titleColor: '#FEFCF3',
+          bodyColor: '#FEFCF3',
+          callbacks: {
+            label: function(context) {
+              return `${context.label}: $${context.parsed.y.toLocaleString()} MXN`;
+            }
           }
         }
       },
@@ -656,6 +672,9 @@ function initializeCharts() {
             font: {
               size: 10,
               weight: '500'
+            },
+            callback: function(value) {
+              return '$' + value.toLocaleString();
             }
           },
           grid: {
