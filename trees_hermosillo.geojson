@@ -102,6 +102,40 @@
         "health": "Excelente",
         "condition": "Good"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.947400, 29.0791750]
+      },
+      "properties": {
+        "id": "HMO_007",
+        "species": "Palo Fierro (Olneya tesota)",
+        "diameter_cm": 42,
+        "height_m": 9.2,
+        "crown_diameter": 6.5,
+        "planted_year": 2017,
+        "health": "Buena",
+        "condition": "Good"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.947560, 29.0791880]
+      },
+      "properties": {
+        "id": "HMO_008",
+        "species": "Mezquite (Prosopis velutina)",
+        "diameter_cm": 52,
+        "height_m": 11.5,
+        "crown_diameter": 8.8,
+        "planted_year": 2013,
+        "health": "Excelente",
+        "condition": "Excellent"
+      }
     }
   ]
 }

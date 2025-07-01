@@ -794,6 +794,148 @@ html, body {
   border: none;
 }
 
+/* ENHANCED TREE ANALYSIS */
+.tree-analysis {
+  margin: 24px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, var(--sage), var(--accent-green));
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-medium);
+  color: var(--warm-white);
+}
+
+.tree-analysis h3 {
+  color: var(--warm-white);
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.analysis-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.metric-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.metric-row:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(4px);
+}
+
+.metric-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--warm-white);
+}
+
+/* ENHANCED BENEFIT ITEMS */
+.benefit-item {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: var(--warm-white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--soft-beige);
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--accent-green);
+}
+
+.benefit-item .benefit-icon {
+  font-size: 1.8rem;
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--accent-green), var(--sage));
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: var(--shadow-light);
+}
+
+.benefit-item h4 {
+  font-size: 1rem;
+  color: var(--primary-green);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.benefit-value {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.benefit-value .amount {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.benefit-value .unit {
+  font-size: 0.9rem;
+  color: var(--gray-medium);
+  font-weight: 500;
+}
+
+.benefit-value .value {
+  font-size: 0.85rem;
+  color: var(--earth-brown);
+  font-weight: 600;
+  margin-left: auto;
+}
+
+/* GRID IMPROVEMENTS FOR LARGER STAT GRIDS */
+@media (min-width: 400px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+  }
+  
+  .stat-card {
+    padding: 12px;
+  }
+  
+  .stat-icon {
+    font-size: 1.3rem;
+    width: 36px;
+    height: 36px;
+  }
+  
+  .stat-value {
+    font-size: 1rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+}
+
 /* ANIMATIONS & TRANSITIONS */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }

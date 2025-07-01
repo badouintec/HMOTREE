@@ -197,6 +197,56 @@ function updateAdditionalMetrics(benefits) {
   if (crownAreaEl) {
     crownAreaEl.textContent = `${benefits.crownArea} m²`;
   }
+  
+  // Métricas avanzadas de análisis
+  const sustainabilityEl = document.getElementById('sustainability-index');
+  if (sustainabilityEl) {
+    const sustainability = calculateSustainabilityIndex(benefits);
+    sustainabilityEl.textContent = `${sustainability}/100`;
+  }
+  
+  const ecoContributionEl = document.getElementById('ecological-contribution');
+  if (ecoContributionEl) {
+    const contribution = calculateEcologicalContribution(benefits);
+    ecoContributionEl.textContent = contribution;
+  }
+  
+  const energyEfficiencyEl = document.getElementById('energy-efficiency');
+  if (energyEfficiencyEl) {
+    const efficiency = calculateEnergyEfficiency(benefits);
+    energyEfficiencyEl.textContent = efficiency;
+  }
+}
+
+function calculateSustainabilityIndex(benefits) {
+  // Índice basado en múltiples factores ambientales
+  const waterScore = Math.min((parseFloat(benefits.stormwaterValue) / 50) * 25, 25);
+  const energyScore = Math.min((parseFloat(benefits.energyValue) / 100) * 25, 25);
+  const airScore = Math.min((parseFloat(benefits.airValue) / 30) * 25, 25);
+  const carbonScore = Math.min((parseFloat(benefits.carbonValue) / 20) * 25, 25);
+  
+  return Math.round(waterScore + energyScore + airScore + carbonScore);
+}
+
+function calculateEcologicalContribution(benefits) {
+  const totalBenefit = parseFloat(benefits.totalValue);
+  if (totalBenefit > 300) return 'Excelente';
+  if (totalBenefit > 200) return 'Alta';
+  if (totalBenefit > 100) return 'Moderada';
+  if (totalBenefit > 50) return 'Baja';
+  return 'Limitada';
+}
+
+function calculateEnergyEfficiency(benefits) {
+  const energyValue = parseFloat(benefits.energyValue);
+  const crownArea = parseFloat(benefits.crownArea);
+  const efficiency = energyValue / crownArea;
+  
+  if (efficiency > 50) return 'Muy Alta';
+  if (efficiency > 30) return 'Alta';
+  if (efficiency > 20) return 'Moderada';
+  if (efficiency > 10) return 'Baja';
+  return 'Muy Baja';
 }
 
 function calculateCO2Absorption(diameter, height) {
