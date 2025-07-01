@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Hermosillo Tree Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-section">
+      <img src="icon.svg" alt="Logo Hermosillo Parks" class="logo">
+      <div>
+        <div class="site-title">Hermosillo Tree Map</div>
+        <div class="site-tagline">Explora y cuida el bosque urbano de Hermosillo</div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="#" class="active">Map</a>
+      <a href="#">My Trees</a>
+      <a href="#">Learn</a>
+      <a href="#">Groups</a>
+    </nav>
+    <div class="header-controls">
+      <button class="ctrl">Text Size A⇅</button>
+      <button class="ctrl">Language 🈂</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <div class="sidebar-content">
+        <!-- Tree Details Panel -->
+        <div id="tree-details" class="tree-details">
+          <div class="tree-header">
+            <div class="tree-icon">
+              <svg width="60" height="80" viewBox="0 0 60 80">
+                <path d="M30 10 C20 10, 15 20, 20 30 C10 25, 5 35, 15 40 C5 35, 0 45, 10 50 C15 55, 25 50, 30 55 C35 50, 45 55, 50 50 C60 45, 55 35, 45 40 C55 35, 50 25, 40 30 C45 20, 40 10, 30 10 Z" fill="#4CAF50"/>
+                <rect x="28" y="55" width="4" height="20" fill="#8B4513"/>
+              </svg>
+            </div>
+            <div class="tree-info">
+              <h2 id="tree-species">Selecciona un árbol</h2>
+              <p id="tree-scientific">Haz clic en cualquier árbol del mapa</p>
+            </div>
+          </div>
+
+          <div id="tree-data" class="tree-data" style="display: none;">
+            <div class="data-row">
+              <label>Dirección más cercana</label>
+              <span id="tree-address">—</span>
+            </div>
+            <div class="data-row">
+              <label>ID del Árbol</label>
+              <span id="tree-id">—</span>
+            </div>
+            <div class="data-row">
+              <label>Diámetro del Tronco</label>
+              <span id="tree-diameter">—</span>
+            </div>
+            <div class="data-row">
+              <label>Altura</label>
+              <span id="tree-height">—</span>
+            </div>
+            <div class="data-row">
+              <label>Diámetro de Copa</label>
+              <span id="tree-crown">—</span>
+            </div>
+            <div class="data-row">
+              <label>Año de Plantación</label>
+              <span id="tree-year">—</span>
+            </div>
+            <div class="data-row">
+              <label>Estado de Salud</label>
+              <span id="tree-health">—</span>
+            </div>
+            <div class="data-row">
+              <label>Condición General</label>
+              <span id="tree-condition">—</span>
+            </div>
+
+            <!-- Tree Statistics -->
+            <div class="tree-statistics">
+              <h3>Estadísticas del Árbol</h3>
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <div class="stat-icon">📏</div>
+                  <div class="stat-info">
+                    <span class="stat-value" id="tree-age">—</span>
+                    <span class="stat-label">Años de Edad</span>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon">🌿</div>
+                  <div class="stat-info">
+                    <span class="stat-value" id="tree-area">—</span>
+                    <span class="stat-label">m² de Sombra</span>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon">💚</div>
+                  <div class="stat-info">
+                    <span class="stat-value" id="tree-co2">—</span>
+                    <span class="stat-label">kg CO₂/año</span>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon">🌱</div>
+                  <div class="stat-info">
+                    <span class="stat-value" id="tree-score">—</span>
+                    <span class="stat-label">Puntuación</span>
+                  </div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-icon">🍃</div>
+                  <div class="stat-info">
+                    <span class="stat-value" id="crown-area-actual">—</span>
+                    <span class="stat-label">Área Real de Copa</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Enhanced Tree Analysis Section -->
+            <div class="tree-analysis">
+              <h3>Análisis Avanzado</h3>
+              <div class="analysis-metrics">
+                <div class="metric-row">
+                  <span class="metric-label">📊 Índice de Sostenibilidad:</span>
+                  <span class="metric-value" id="sustainability-index">—</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">🌍 Contribución Ecológica:</span>
+                  <span class="metric-value" id="ecological-contribution">—</span>
+                </div>
+                <div class="metric-row">
+                  <span class="metric-label">💡 Eficiencia Energética:</span>
+                  <span class="metric-value" id="energy-efficiency">—</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Charts Container for Individual Tree -->
+            <div class="tree-charts">
+              <h3>Análisis del Árbol</h3>
+              <div class="charts-container">
+                <h4>Estado del Árbol</h4>
+                <canvas id="speciesChart" width="300" height="200"></canvas>
+                
+                <h4 style="margin-top: 20px;">Beneficios Específicos</h4>
+                <canvas id="benefitsChart" width="300" height="200"></canvas>
+              </div>
+            </div>
+
+            <div class="action-buttons">
+              <button class="btn-action" id="suggest-edit">✏️ Sugerir una Edición</button>
+              <button class="btn-action" id="record-care">📝 Registrar Cuidado del Árbol</button>
+            </div>
+
+            <div class="tree-activities">
+              <h3>Actividades de Cuidado</h3>
+              <p class="no-activities">No hay actividades reportadas para este árbol. Haz clic en "Registrar Cuidado del Árbol" para registrar actividad.</p>
+            </div>
+
+            <!-- Ecological Benefits -->
+            <div class="ecological-benefits">
+              <h3>Beneficios Ecológicos</h3>
+              
+              <div class="benefit-item">
+                <div class="benefit-icon">💧</div>
+                <div class="benefit-content">
+                  <h4>Agua pluvial interceptada cada año</h4>
+                  <div class="benefit-value">
+                    <span id="water-amount" class="amount">—</span>
+                    <span class="unit">litros</span>
+                    <span class="value">Valor: <span id="water-value">—</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">⚡</div>
+                <div class="benefit-content">
+                  <h4>Energía conservada cada año</h4>
+                  <div class="benefit-value">
+                    <span id="energy-amount" class="amount">—</span>
+                    <span class="unit">kWh</span>
+                    <span class="value">Valor: <span id="energy-value">—</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">🌬️</div>
+                <div class="benefit-content">
+                  <h4>Contaminantes del aire removidos cada año</h4>
+                  <div class="benefit-value">
+                    <span id="air-amount" class="amount">—</span>
+                    <span class="unit">kg</span>
+                    <span class="value">Valor: <span id="air-value">—</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">🫁</div>
+                <div class="benefit-content">
+                  <h4>Oxígeno producido cada año</h4>
+                  <div class="benefit-value">
+                    <span id="oxygen-amount" class="amount">—</span>
+                    <span class="unit">kg</span>
+                    <span class="value">Valor: <span id="oxygen-value">—</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">🌱</div>
+                <div class="benefit-content">
+                  <h4>Carbono secuestrado cada año</h4>
+                  <div class="benefit-value">
+                    <span id="carbon-amount" class="amount">—</span>
+                    <span class="unit">kg</span>
+                    <span class="value">Valor: <span id="carbon-value">—</span></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="benefit-item">
+                <div class="benefit-icon">🌡️</div>
+                <div class="benefit-content">
+                  <h4>Reducción de temperatura</h4>
+                  <div class="benefit-value">
+                    <span id="temperature-reduction" class="amount">—</span>
+                    <span class="unit">en el área de sombra</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="total-benefit">
+                <div class="benefit-icon">💰</div>
+                <div class="benefit-content">
+                  <h4>Valor Total de Beneficios Anuales</h4>
+                  <div class="total-value">
+                    Valor: <span id="total-value">—</span>
+                  </div>
+                </div>
+              </div>
+
+              <p class="benefits-note">Los beneficios se calculan usando fórmulas del Servicio Forestal de EE.UU.</p>
+              
+              <button class="learn-more-btn">APRENDE MÁS SOBRE LOS BENEFICIOS DE LOS ÁRBOLES EN HERMOSILLO</button>
+            </div>
+          </div>
+
+          <!-- Default Welcome Panel -->
+          <div id="welcome-panel" class="welcome-panel">
+            <h1>Hermosillo's Trees</h1>
+            <hr class="accent">
+            <p>Este mapa interactivo trae el bosque urbano de Hermosillo a tus manos. Al hacer zoom podrás ver cada árbol de Parque Madero y obtener sus datos con un clic.</p>
+            
+            <div class="stats-container">
+              <h3>Estadísticas del Bosque Urbano</h3>
+              <div class="stat-item">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Árboles Registrados</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">5</span>
+                <span class="stat-label">Especies Diferentes</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">$10,400</span>
+                <span class="stat-label">Valor Anual en Beneficios</span>
+              </div>
+              
+              <!-- Charts Container -->
+              <div class="charts-container">
+                <h4>Distribución por Especies</h4>
+                <canvas id="speciesChart" width="300" height="200"></canvas>
+                
+                <h4 style="margin-top: 20px;">Beneficios Ecológicos Totales</h4>
+                <canvas id="benefitsChart" width="300" height="200"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+    <div id="map" class="map">
+      <div class="map-controls">
+        <div class="search-box">
+          <input type="text" placeholder="Zoom to Address" id="address-search">
+          <button class="search-btn">🔍</button>
+        </div>
+        <div class="map-actions">
+          <button class="map-btn share-btn">📤 Share</button>
+          <button class="map-btn tweet-btn">🐦 Tweet</button>
+          <button class="map-btn favorite-btn">❤️ Favorite</button>
+          <button class="map-btn report-btn">⚠️ Report Problem</button>
+        </div>
+      </div>
+      <div class="map-legend">
+        <p><strong>Clave del Mapa:</strong> El color del marcador indica la especie. El tamaño del marcador indica el diámetro del tronco. Haz clic en un árbol en el mapa para ver los detalles completos del árbol.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

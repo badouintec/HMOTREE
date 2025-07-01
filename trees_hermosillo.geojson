@@ -1,0 +1,107 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.947542, 29.0791825]
+      },
+      "properties": {
+        "id": "HMO_001",
+        "species": "Mezquite (Prosopis velutina)",
+        "diameter_cm": 48,
+        "height_m": 10.2,
+        "crown_diameter": 7.0,
+        "planted_year": 2016,
+        "health": "Excelente",
+        "condition": "Good"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.947620, 29.0792100]
+      },
+      "properties": {
+        "id": "HMO_002",
+        "species": "Palo Verde (Parkinsonia florida)",
+        "diameter_cm": 30,
+        "height_m": 6.5,
+        "crown_diameter": 4.5,
+        "planted_year": 2018,
+        "health": "Buena",
+        "condition": "Fair"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.947480, 29.0791650]
+      },
+      "properties": {
+        "id": "HMO_003",
+        "species": "Encino (Quercus oblongifolia)",
+        "diameter_cm": 55,
+        "height_m": 12.0,
+        "crown_diameter": 8.2,
+        "planted_year": 2014,
+        "health": "Excelente",
+        "condition": "Good"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.947350, 29.0791950]
+      },
+      "properties": {
+        "id": "HMO_004",
+        "species": "Willow del Desierto (Chilopsis linearis)",
+        "diameter_cm": 22,
+        "height_m": 5.5,
+        "crown_diameter": 3.8,
+        "planted_year": 2020,
+        "health": "Buena",
+        "condition": "Fair"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.947590, 29.0791700]
+      },
+      "properties": {
+        "id": "HMO_005",
+        "species": "Ironwood (Olneya tesota)",
+        "diameter_cm": 35,
+        "height_m": 7.5,
+        "crown_diameter": 5.2,
+        "planted_year": 2015,
+        "health": "Regular",
+        "condition": "Fair"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.947500, 29.0792000]
+      },
+      "properties": {
+        "id": "HMO_006",
+        "species": "Willow del Desierto (Chilopsis linearis)",
+        "diameter_cm": 18,
+        "height_m": 4.8,
+        "crown_diameter": 3.2,
+        "planted_year": 2019,
+        "health": "Excelente",
+        "condition": "Good"
+      }
+    }
+  ]
+}
