@@ -1,140 +1,2157 @@
 {
   "type": "FeatureCollection",
+  "metadata": {
+    "generated": "2025-07-02T17:59:35.345272",
+    "total_trees": 69,
+    "unique_species": 28,
+    "source": "Especies Nativas Sonora + Ubicaciones Originales Hermosillo",
+    "coordinate_system": "WGS84",
+    "area": "Centro de Hermosillo, Sonora",
+    "bounds": {
+      "lat_min": 29.076,
+      "lat_max": 29.08,
+      "lon_min": -110.95,
+      "lon_max": -110.943
+    }
+  },
   "features": [
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-110.947542, 29.0791825]
+        "coordinates": [
+          -110.945141,
+          29.0767522
+        ]
       },
       "properties": {
         "id": "HMO_001",
-        "species": "Mezquite (Prosopis velutina)",
-        "diameter_cm": 48,
-        "height_m": 10.2,
-        "crown_diameter": 7.0,
-        "planted_year": 2016,
-        "health": "Excelente",
-        "condition": "Good"
+        "species": "Mezquite dulce (Prosopis glandulosa)",
+        "diameter_cm": 22.6,
+        "height_m": 11.9,
+        "crown_diameter": 4.0,
+        "planted_year": 2019,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-110.947620, 29.0792100]
+        "coordinates": [
+          -110.9478342,
+          29.0790095
+        ]
       },
       "properties": {
         "id": "HMO_002",
-        "species": "Palo Verde (Parkinsonia florida)",
-        "diameter_cm": 30,
-        "height_m": 6.5,
+        "species": "Mezquite (Prosopis velutina)",
+        "diameter_cm": 20.9,
+        "height_m": 4.8,
         "crown_diameter": 4.5,
-        "planted_year": 2018,
+        "planted_year": 2022,
         "health": "Buena",
-        "condition": "Fair"
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-110.947480, 29.0791650]
+        "coordinates": [
+          -110.9477255,
+          29.0790612
+        ]
       },
       "properties": {
         "id": "HMO_003",
-        "species": "Encino (Quercus oblongifolia)",
-        "diameter_cm": 55,
-        "height_m": 12.0,
-        "crown_diameter": 8.2,
-        "planted_year": 2014,
-        "health": "Excelente",
-        "condition": "Good"
+        "species": "Mezquite de articulaciones (Prosopis articulata)",
+        "diameter_cm": 49.2,
+        "height_m": 6.4,
+        "crown_diameter": 5.0,
+        "planted_year": 2012,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-110.947350, 29.0791950]
+        "coordinates": [
+          -110.9479381,
+          29.0788614
+        ]
       },
       "properties": {
         "id": "HMO_004",
-        "species": "Willow del Desierto (Chilopsis linearis)",
-        "diameter_cm": 22,
-        "height_m": 5.5,
-        "crown_diameter": 3.8,
-        "planted_year": 2020,
-        "health": "Buena",
-        "condition": "Fair"
+        "species": "Palo verde azul (Parkinsonia florida)",
+        "diameter_cm": 24.8,
+        "height_m": 4.6,
+        "crown_diameter": 5.1,
+        "planted_year": 2015,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-110.947590, 29.0791700]
+        "coordinates": [
+          -110.9484272,
+          29.0784772
+        ]
       },
       "properties": {
         "id": "HMO_005",
-        "species": "Ironwood (Olneya tesota)",
-        "diameter_cm": 35,
-        "height_m": 7.5,
-        "crown_diameter": 5.2,
-        "planted_year": 2015,
-        "health": "Regular",
-        "condition": "Fair"
+        "species": "Palo brea (Parkinsonia aculeata)",
+        "diameter_cm": 32.8,
+        "height_m": 6.7,
+        "crown_diameter": 4.5,
+        "planted_year": 2010,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-110.947500, 29.0792000]
+        "coordinates": [
+          -110.9476647,
+          29.0784311
+        ]
       },
       "properties": {
         "id": "HMO_006",
-        "species": "Willow del Desierto (Chilopsis linearis)",
-        "diameter_cm": 18,
-        "height_m": 4.8,
-        "crown_diameter": 3.2,
-        "planted_year": 2019,
-        "health": "Excelente",
-        "condition": "Good"
+        "species": "Palo verde amarillo (Parkinsonia microphylla)",
+        "diameter_cm": 41.3,
+        "height_m": 5.0,
+        "crown_diameter": 4.6,
+        "planted_year": 2023,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-110.947400, 29.0791750]
+        "coordinates": [
+          -110.9476615,
+          29.079159
+        ]
       },
       "properties": {
         "id": "HMO_007",
-        "species": "Palo Fierro (Olneya tesota)",
-        "diameter_cm": 42,
-        "height_m": 9.2,
-        "crown_diameter": 6.5,
-        "planted_year": 2017,
-        "health": "Buena",
-        "condition": "Good"
+        "species": "Huizache (Acacia farnesiana)",
+        "diameter_cm": 11.6,
+        "height_m": 2.4,
+        "crown_diameter": 1.5,
+        "planted_year": 2013,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
       }
     },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
-        "coordinates": [-110.947560, 29.0791880]
+        "coordinates": [
+          -110.9471897,
+          29.0792887
+        ]
       },
       "properties": {
         "id": "HMO_008",
-        "species": "Mezquite (Prosopis velutina)",
-        "diameter_cm": 52,
-        "height_m": 11.5,
-        "crown_diameter": 8.8,
+        "species": "Cucharito (Acacia cochliacantha)",
+        "diameter_cm": 27.4,
+        "height_m": 4.6,
+        "crown_diameter": 2.4,
+        "planted_year": 2024,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9472876,
+          29.0789324
+        ]
+      },
+      "properties": {
+        "id": "HMO_009",
+        "species": "Acacia de Willard (Acacia willardiana)",
+        "diameter_cm": 27.8,
+        "height_m": 2.2,
+        "crown_diameter": 1.9,
+        "planted_year": 2022,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9471106,
+          29.0794176
+        ]
+      },
+      "properties": {
+        "id": "HMO_010",
+        "species": "Palo fierro (Olneya tesota)",
+        "diameter_cm": 78.2,
+        "height_m": 5.7,
+        "crown_diameter": 7.9,
+        "planted_year": 2019,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desierto Sonorense, bajadas, arroyos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Especie nodriza, refugio para múltiples especies",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Lento",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Perenne",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9470583,
+          29.0790942
+        ]
+      },
+      "properties": {
+        "id": "HMO_011",
+        "species": "Ocotillo (Fouquieria splendens)",
+        "diameter_cm": 9.1,
+        "height_m": 3.6,
+        "crown_diameter": 1.7,
+        "planted_year": 2023,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400",
+        "family": "Fouquieriaceae",
+        "habitat": "Laderas rocosas, desiertos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, cercas vivas, medicinal",
+        "growth_rate": "Lento",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Perenne",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9468906,
+          29.0790238
+        ]
+      },
+      "properties": {
+        "id": "HMO_012",
+        "species": "Ocotillo de MacDougal (Fouquieria macdougalii)",
+        "diameter_cm": 13.2,
+        "height_m": 6.4,
+        "crown_diameter": 2.9,
+        "planted_year": 2015,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400",
+        "family": "Fouquieriaceae",
+        "habitat": "Laderas rocosas, desiertos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, cercas vivas, medicinal",
+        "growth_rate": "Lento",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Perenne",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9464521,
+          29.0791575
+        ]
+      },
+      "properties": {
+        "id": "HMO_013",
+        "species": "Sauce del desierto (Chilopsis linearis)",
+        "diameter_cm": 31.5,
+        "height_m": 6.7,
+        "crown_diameter": 4.5,
+        "planted_year": 2013,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1574482620253-103bddeb4d3a?w=400",
+        "family": "Bignoniaceae",
+        "habitat": "Lechos de arroyos, cañadas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9454265,
+          29.0795011
+        ]
+      },
+      "properties": {
+        "id": "HMO_014",
+        "species": "Guaje (Leucaena leucocephala)",
+        "diameter_cm": 46.3,
+        "height_m": 9.2,
+        "crown_diameter": 6.6,
+        "planted_year": 2012,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9462378,
+          29.0794616
+        ]
+      },
+      "properties": {
+        "id": "HMO_015",
+        "species": "Madera amarilla (Lysiloma divaricatum)",
+        "diameter_cm": 49.6,
+        "height_m": 7.4,
+        "crown_diameter": 3.9,
+        "planted_year": 2023,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1574263867128-01fd5d7dffdb?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.945529,
+          29.0787784
+        ]
+      },
+      "properties": {
+        "id": "HMO_016",
+        "species": "Tepeguaje (Lysiloma watsonii)",
+        "diameter_cm": 28.3,
+        "height_m": 10.0,
+        "crown_diameter": 2.8,
+        "planted_year": 2010,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1574263867128-01fd5d7dffdb?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9460867,
+          29.0788361
+        ]
+      },
+      "properties": {
+        "id": "HMO_017",
+        "species": "Ciruelo mexicano (Spondias purpurea)",
+        "diameter_cm": 54.4,
+        "height_m": 8.9,
+        "crown_diameter": 6.6,
+        "planted_year": 2022,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1512428812857-e3adb6d1ad15?w=400",
+        "family": "Anacardiaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9463073,
+          29.0788513
+        ]
+      },
+      "properties": {
+        "id": "HMO_018",
+        "species": "Frangipani (Plumeria rubra)",
+        "diameter_cm": 37.5,
+        "height_m": 7.1,
+        "crown_diameter": 5.5,
         "planted_year": 2013,
         "health": "Excelente",
-        "condition": "Excellent"
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400",
+        "family": "Apocynaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9467785,
+          29.0788352
+        ]
+      },
+      "properties": {
+        "id": "HMO_019",
+        "species": "Palma de Brandegee (Brahea brandegeei)",
+        "diameter_cm": 40.8,
+        "height_m": 3.5,
+        "crown_diameter": 2.7,
+        "planted_year": 2014,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+        "family": "Arecaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Perenne",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9472116,
+          29.0786875
+        ]
+      },
+      "properties": {
+        "id": "HMO_020",
+        "species": "Palma de Ures (Sabal uresana)",
+        "diameter_cm": 23.0,
+        "height_m": 6.1,
+        "crown_diameter": 3.0,
+        "planted_year": 2014,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400",
+        "family": "Arecaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9458621,
+          29.0774568
+        ]
+      },
+      "properties": {
+        "id": "HMO_021",
+        "species": "Palma mexicana (Washingtonia robusta)",
+        "diameter_cm": 60.3,
+        "height_m": 17.2,
+        "crown_diameter": 2.8,
+        "planted_year": 2016,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400",
+        "family": "Arecaceae",
+        "habitat": "Oasis, cañones con agua",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Perenne",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9457213,
+          29.0781446
+        ]
+      },
+      "properties": {
+        "id": "HMO_022",
+        "species": "Jícaro (Crescentia alata)",
+        "diameter_cm": 44.0,
+        "height_m": 7.7,
+        "crown_diameter": 7.9,
+        "planted_year": 2018,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400",
+        "family": "Bignoniaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9456866,
+          29.0776162
+        ]
+      },
+      "properties": {
+        "id": "HMO_023",
+        "species": "Primavera (Tabebuia chrysantha)",
+        "diameter_cm": 84.9,
+        "height_m": 16.9,
+        "crown_diameter": 14.5,
+        "planted_year": 2013,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400",
+        "family": "Bignoniaceae",
+        "habitat": "Bosques tropicales secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9453513,
+          29.0771031
+        ]
+      },
+      "properties": {
+        "id": "HMO_024",
+        "species": "Lapacho rosado (Tabebuia impetiginosa)",
+        "diameter_cm": 94.0,
+        "height_m": 12.6,
+        "crown_diameter": 7.8,
+        "planted_year": 2010,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400",
+        "family": "Bignoniaceae",
+        "habitat": "Bosques tropicales secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.945796,
+          29.0769847
+        ]
+      },
+      "properties": {
+        "id": "HMO_025",
+        "species": "Trompillo (Cordia sonorae)",
+        "diameter_cm": 30.8,
+        "height_m": 4.0,
+        "crown_diameter": 7.3,
+        "planted_year": 2021,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400",
+        "family": "Boraginaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9463415,
+          29.0771426
+        ]
+      },
+      "properties": {
+        "id": "HMO_026",
+        "species": "Torote blanco (Bursera laxiflora)",
+        "diameter_cm": 59.4,
+        "height_m": 4.3,
+        "crown_diameter": 3.6,
+        "planted_year": 2011,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400",
+        "family": "Burseraceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Lento",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9460105,
+          29.0780069
+        ]
+      },
+      "properties": {
+        "id": "HMO_027",
+        "species": "Torote prieto (Bursera microphylla)",
+        "diameter_cm": 52.5,
+        "height_m": 6.0,
+        "crown_diameter": 5.0,
+        "planted_year": 2013,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400",
+        "family": "Burseraceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Lento",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9463404,
+          29.078369
+        ]
+      },
+      "properties": {
+        "id": "HMO_028",
+        "species": "Palo santo (Forchhammeria watsonii)",
+        "diameter_cm": 16.7,
+        "height_m": 6.9,
+        "crown_diameter": 3.5,
+        "planted_year": 2011,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400",
+        "family": "Resedaceae",
+        "habitat": "Zonas áridas urbanas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Importante para ecosistema desértico",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9463798,
+          29.078278
+        ]
+      },
+      "properties": {
+        "id": "HMO_029",
+        "species": "Palo verde amarillo (Parkinsonia microphylla)",
+        "diameter_cm": 47.4,
+        "height_m": 4.6,
+        "crown_diameter": 4.3,
+        "planted_year": 2021,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.946087,
+          29.0785355
+        ]
+      },
+      "properties": {
+        "id": "HMO_030",
+        "species": "Huizache (Acacia farnesiana)",
+        "diameter_cm": 14.9,
+        "height_m": 5.9,
+        "crown_diameter": 2.7,
+        "planted_year": 2011,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9454191,
+          29.0787031
+        ]
+      },
+      "properties": {
+        "id": "HMO_031",
+        "species": "Mezquite (Prosopis velutina)",
+        "diameter_cm": 35.7,
+        "height_m": 4.6,
+        "crown_diameter": 8.1,
+        "planted_year": 2020,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9464142,
+          29.0768418
+        ]
+      },
+      "properties": {
+        "id": "HMO_032",
+        "species": "Palo verde amarillo (Parkinsonia microphylla)",
+        "diameter_cm": 19.7,
+        "height_m": 4.8,
+        "crown_diameter": 5.3,
+        "planted_year": 2014,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9464987,
+          29.0773499
+        ]
+      },
+      "properties": {
+        "id": "HMO_033",
+        "species": "Palo brea (Parkinsonia aculeata)",
+        "diameter_cm": 21.5,
+        "height_m": 3.7,
+        "crown_diameter": 4.1,
+        "planted_year": 2013,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9465389,
+          29.0776552
+        ]
+      },
+      "properties": {
+        "id": "HMO_034",
+        "species": "Mezquite dulce (Prosopis glandulosa)",
+        "diameter_cm": 22.0,
+        "height_m": 5.6,
+        "crown_diameter": 3.5,
+        "planted_year": 2018,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9495769,
+          29.0790296
+        ]
+      },
+      "properties": {
+        "id": "HMO_035",
+        "species": "Cucharito (Acacia cochliacantha)",
+        "diameter_cm": 17.3,
+        "height_m": 4.7,
+        "crown_diameter": 3.3,
+        "planted_year": 2021,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9488689,
+          29.0792235
+        ]
+      },
+      "properties": {
+        "id": "HMO_036",
+        "species": "Mezquite (Prosopis velutina)",
+        "diameter_cm": 74.6,
+        "height_m": 7.9,
+        "crown_diameter": 11.2,
+        "planted_year": 2021,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9488831,
+          29.0787953
+        ]
+      },
+      "properties": {
+        "id": "HMO_037",
+        "species": "Palo fierro (Olneya tesota)",
+        "diameter_cm": 74.6,
+        "height_m": 10.8,
+        "crown_diameter": 6.1,
+        "planted_year": 2018,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desierto Sonorense, bajadas, arroyos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Especie nodriza, refugio para múltiples especies",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Lento",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Perenne",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9493805,
+          29.0786584
+        ]
+      },
+      "properties": {
+        "id": "HMO_038",
+        "species": "Palo verde amarillo (Parkinsonia microphylla)",
+        "diameter_cm": 42.4,
+        "height_m": 5.5,
+        "crown_diameter": 5.4,
+        "planted_year": 2017,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.949514,
+          29.0785221
+        ]
+      },
+      "properties": {
+        "id": "HMO_039",
+        "species": "Palo verde azul (Parkinsonia florida)",
+        "diameter_cm": 34.9,
+        "height_m": 7.1,
+        "crown_diameter": 4.4,
+        "planted_year": 2016,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9467584,
+          29.0785817
+        ]
+      },
+      "properties": {
+        "id": "HMO_040",
+        "species": "Mezquite dulce (Prosopis glandulosa)",
+        "diameter_cm": 22.1,
+        "height_m": 7.4,
+        "crown_diameter": 4.2,
+        "planted_year": 2018,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.947138,
+          29.0784578
+        ]
+      },
+      "properties": {
+        "id": "HMO_041",
+        "species": "Palo brea (Parkinsonia aculeata)",
+        "diameter_cm": 41.4,
+        "height_m": 4.7,
+        "crown_diameter": 4.8,
+        "planted_year": 2013,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9469543,
+          29.0774282
+        ]
+      },
+      "properties": {
+        "id": "HMO_042",
+        "species": "Cucharito (Acacia cochliacantha)",
+        "diameter_cm": 23.0,
+        "height_m": 5.6,
+        "crown_diameter": 3.4,
+        "planted_year": 2019,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9475218,
+          29.0775163
+        ]
+      },
+      "properties": {
+        "id": "HMO_043",
+        "species": "Palo verde azul (Parkinsonia florida)",
+        "diameter_cm": 24.6,
+        "height_m": 3.9,
+        "crown_diameter": 4.0,
+        "planted_year": 2018,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9469047,
+          29.0782074
+        ]
+      },
+      "properties": {
+        "id": "HMO_044",
+        "species": "Acacia de Willard (Acacia willardiana)",
+        "diameter_cm": 16.1,
+        "height_m": 4.1,
+        "crown_diameter": 3.5,
+        "planted_year": 2012,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9477408,
+          29.0781614
+        ]
+      },
+      "properties": {
+        "id": "HMO_045",
+        "species": "Mezquite (Prosopis velutina)",
+        "diameter_cm": 35.0,
+        "height_m": 7.1,
+        "crown_diameter": 3.5,
+        "planted_year": 2019,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9472896,
+          29.078055
+        ]
+      },
+      "properties": {
+        "id": "HMO_046",
+        "species": "Palo verde azul (Parkinsonia florida)",
+        "diameter_cm": 33.9,
+        "height_m": 4.1,
+        "crown_diameter": 3.7,
+        "planted_year": 2022,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9474385,
+          29.0782109
+        ]
+      },
+      "properties": {
+        "id": "HMO_047",
+        "species": "Palo verde amarillo (Parkinsonia microphylla)",
+        "diameter_cm": 41.3,
+        "height_m": 7.9,
+        "crown_diameter": 3.5,
+        "planted_year": 2021,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9468363,
+          29.0782132
+        ]
+      },
+      "properties": {
+        "id": "HMO_048",
+        "species": "Acacia de Willard (Acacia willardiana)",
+        "diameter_cm": 13.6,
+        "height_m": 3.6,
+        "crown_diameter": 1.8,
+        "planted_year": 2018,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9483091,
+          29.0777495
+        ]
+      },
+      "properties": {
+        "id": "HMO_049",
+        "species": "Mezquite (Prosopis velutina)",
+        "diameter_cm": 20.0,
+        "height_m": 6.6,
+        "crown_diameter": 7.6,
+        "planted_year": 2014,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9478228,
+          29.0777436
+        ]
+      },
+      "properties": {
+        "id": "HMO_050",
+        "species": "Palo fierro (Olneya tesota)",
+        "diameter_cm": 59.0,
+        "height_m": 12.2,
+        "crown_diameter": 7.1,
+        "planted_year": 2020,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desierto Sonorense, bajadas, arroyos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Especie nodriza, refugio para múltiples especies",
+        "uses": "Ornamental, sombra",
+        "growth_rate": "Lento",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Perenne",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9483819,
+          29.0779669
+        ]
+      },
+      "properties": {
+        "id": "HMO_051",
+        "species": "Cucharito (Acacia cochliacantha)",
+        "diameter_cm": 20.9,
+        "height_m": 4.4,
+        "crown_diameter": 2.5,
+        "planted_year": 2019,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9481215,
+          29.0772917
+        ]
+      },
+      "properties": {
+        "id": "HMO_052",
+        "species": "Mezquite (Prosopis velutina)",
+        "diameter_cm": 49.0,
+        "height_m": 4.8,
+        "crown_diameter": 4.0,
+        "planted_year": 2016,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.947961,
+          29.077398
+        ]
+      },
+      "properties": {
+        "id": "HMO_053",
+        "species": "Huizache (Acacia farnesiana)",
+        "diameter_cm": 21.4,
+        "height_m": 5.1,
+        "crown_diameter": 3.8,
+        "planted_year": 2017,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9472762,
+          29.0771537
+        ]
+      },
+      "properties": {
+        "id": "HMO_054",
+        "species": "Mezquite (Prosopis velutina)",
+        "diameter_cm": 79.6,
+        "height_m": 11.6,
+        "crown_diameter": 10.0,
+        "planted_year": 2014,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9473653,
+          29.076941
+        ]
+      },
+      "properties": {
+        "id": "HMO_055",
+        "species": "Cucharito (Acacia cochliacantha)",
+        "diameter_cm": 25.6,
+        "height_m": 2.8,
+        "crown_diameter": 3.5,
+        "planted_year": 2014,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9497834,
+          29.079933
+        ]
+      },
+      "properties": {
+        "id": "HMO_056",
+        "species": "Cucharito (Acacia cochliacantha)",
+        "diameter_cm": 15.3,
+        "height_m": 4.2,
+        "crown_diameter": 2.0,
+        "planted_year": 2016,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9483858,
+          29.0778681
+        ]
+      },
+      "properties": {
+        "id": "HMO_057",
+        "species": "Mezquite dulce (Prosopis glandulosa)",
+        "diameter_cm": 41.0,
+        "height_m": 9.1,
+        "crown_diameter": 6.9,
+        "planted_year": 2018,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9475001,
+          29.0763391
+        ]
+      },
+      "properties": {
+        "id": "HMO_058",
+        "species": "Mezquite de articulaciones (Prosopis articulata)",
+        "diameter_cm": 28.3,
+        "height_m": 4.4,
+        "crown_diameter": 5.4,
+        "planted_year": 2019,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9448035,
+          29.0803844
+        ]
+      },
+      "properties": {
+        "id": "HMO_059",
+        "species": "Palo brea (Parkinsonia aculeata)",
+        "diameter_cm": 47.4,
+        "height_m": 3.3,
+        "crown_diameter": 3.7,
+        "planted_year": 2016,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9440257,
+          29.0764603
+        ]
+      },
+      "properties": {
+        "id": "HMO_060",
+        "species": "Palo verde amarillo (Parkinsonia microphylla)",
+        "diameter_cm": 28.2,
+        "height_m": 4.1,
+        "crown_diameter": 5.8,
+        "planted_year": 2011,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9450181,
+          29.0763947
+        ]
+      },
+      "properties": {
+        "id": "HMO_061",
+        "species": "Palo verde azul (Parkinsonia florida)",
+        "diameter_cm": 28.3,
+        "height_m": 5.2,
+        "crown_diameter": 4.7,
+        "planted_year": 2010,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9444138,
+          29.0791595
+        ]
+      },
+      "properties": {
+        "id": "HMO_062",
+        "species": "Cucharito (Acacia cochliacantha)",
+        "diameter_cm": 30.0,
+        "height_m": 4.7,
+        "crown_diameter": 3.7,
+        "planted_year": 2017,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9438559,
+          29.0792392
+        ]
+      },
+      "properties": {
+        "id": "HMO_063",
+        "species": "Mezquite dulce (Prosopis glandulosa)",
+        "diameter_cm": 60.0,
+        "height_m": 7.6,
+        "crown_diameter": 9.4,
+        "planted_year": 2022,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400",
+        "family": "Fabaceae",
+        "habitat": "Zonas áridas, lechos de arroyos, suelos aluviales",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fija nitrógeno, refugio para fauna, frutos comestibles",
+        "uses": "Sombra, madera, frutos comestibles, forraje",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9439015,
+          29.079415
+        ]
+      },
+      "properties": {
+        "id": "HMO_064",
+        "species": "Palo verde azul (Parkinsonia florida)",
+        "diameter_cm": 35.5,
+        "height_m": 3.4,
+        "crown_diameter": 2.1,
+        "planted_year": 2018,
+        "health": "Excelente",
+        "condition": "Good",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9446901,
+          29.0788852
+        ]
+      },
+      "properties": {
+        "id": "HMO_065",
+        "species": "Cucharito (Acacia cochliacantha)",
+        "diameter_cm": 22.0,
+        "height_m": 4.6,
+        "crown_diameter": 2.6,
+        "planted_year": 2016,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9449851,
+          29.0783226
+        ]
+      },
+      "properties": {
+        "id": "HMO_066",
+        "species": "Acacia de Willard (Acacia willardiana)",
+        "diameter_cm": 19.3,
+        "height_m": 5.3,
+        "crown_diameter": 3.0,
+        "planted_year": 2019,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9441508,
+          29.0781934
+        ]
+      },
+      "properties": {
+        "id": "HMO_067",
+        "species": "Cucharito (Acacia cochliacantha)",
+        "diameter_cm": 29.9,
+        "height_m": 4.5,
+        "crown_diameter": 1.6,
+        "planted_year": 2015,
+        "health": "Regular",
+        "condition": "Poor",
+        "photo_url": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400",
+        "family": "Fabaceae",
+        "habitat": "Matorrales áridos, bosques secos",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Atrae polinizadores, refugio para fauna",
+        "uses": "Ornamental, sombra, perfumería",
+        "growth_rate": "Moderado",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Semi-caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9449307,
+          29.0778689
+        ]
+      },
+      "properties": {
+        "id": "HMO_068",
+        "species": "Palo verde azul (Parkinsonia florida)",
+        "diameter_cm": 26.7,
+        "height_m": 5.2,
+        "crown_diameter": 2.7,
+        "planted_year": 2017,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -110.9446272,
+          29.079477
+        ]
+      },
+      "properties": {
+        "id": "HMO_069",
+        "species": "Palo verde azul (Parkinsonia florida)",
+        "diameter_cm": 20.1,
+        "height_m": 4.0,
+        "crown_diameter": 5.2,
+        "planted_year": 2011,
+        "health": "Buena",
+        "condition": "Fair",
+        "photo_url": "https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400",
+        "family": "Fabaceae",
+        "habitat": "Desiertos, planicies, laderas rocosas",
+        "distribution": "Desierto Sonorense, México",
+        "ecology": "Fotosíntesis en corteza, refugio para aves",
+        "uses": "Ornamental, sombra, control de erosión",
+        "growth_rate": "Rápido",
+        "sun_exposure": "Pleno sol",
+        "leaf_persistence": "Caducifolio",
+        "last_survey": "2025-07-02",
+        "surveyor": "Inventario HMO-Tree 2024"
       }
     }
   ]

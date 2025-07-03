@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug - Panel Flotante Beneficios</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        
+        .debug-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .panel-sim {
+            width: 400px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+        
+        .tree-benefits {
+            padding: 20px;
+        }
+        
+        .tree-benefits h4 {
+            margin: 0 0 15px 0;
+            color: #2c3e50;
+            font-size: 16px;
+        }
+        
+        .tree-benefit-items {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .tree-benefit-item {
+            display: flex;
+            align-items: center;
+            padding: 12px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .tree-benefit-item.total {
+            background: #e8f5e8;
+            border-left-color: #2e7d32;
+            font-weight: bold;
+        }
+        
+        .benefit-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .benefit-icon.water { background: #2196F3; }
+        .benefit-icon.energy { background: #FF9800; }
+        .benefit-icon.air { background: #4CAF50; }
+        
+        .benefit-details {
+            flex: 1;
+        }
+        
+        .benefit-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 4px;
+        }
+        
+        .benefit-value {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 2px;
+        }
+        
+        .benefit-value-usd {
+            font-size: 14px;
+            color: #27ae60;
+            font-weight: 500;
+        }
+        
+        .total-label, .total-value {
+            text-align: center;
+            width: 100%;
+        }
+        
+        .total-label {
+            font-size: 14px;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+        
+        .total-value {
+            font-size: 18px;
+            color: #27ae60;
+        }
+        
+        .code-block {
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            margin: 10px 0;
+        }
+        
+        .btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            background: #45a049;
+        }
+        
+        .success { color: #27ae60; }
+        .error { color: #e74c3c; }
+        .warning { color: #f39c12; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Debug - Panel Flotante de Beneficios Ecológicos</h1>
+    
+    <div class="debug-container">
+        <h2>1. Test de Cálculo de Beneficios</h2>
+        <button class="btn" onclick="testBenefitsCalculation()">Calcular Beneficios de Prueba</button>
+        <div id="calc-results"></div>
+    </div>
+    
+    <div class="debug-container">
+        <h2>2. Test de Renderizado HTML</h2>
+        <button class="btn" onclick="testHTMLRender()">Renderizar Beneficios</button>
+        <div class="panel-sim">
+            <div class="tree-benefits">
+                <h4>Beneficios Ecológicos de Este Árbol</h4>
+                <div class="tree-benefit-items" id="test-individual-benefits">
+                    <!-- Contenido dinámico de prueba -->
+                    <p style="color: #666; text-align: center; padding: 20px;">
+                        Haz clic en "Renderizar Beneficios" para ver el contenido
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="debug-container">
+        <h2>3. Test de Selectores DOM</h2>
+        <button class="btn" onclick="testDOMSelectors()">Verificar Selectores</button>
+        <div id="dom-results"></div>
+    </div>
+    
+    <div class="debug-container">
+        <h2>4. Funciones Utilitarias</h2>
+        <button class="btn" onclick="testUtilityFunctions()">Test Utils</button>
+        <div id="utils-results"></div>
+    </div>
+
+    <script>
+        // Copiar funciones principales del proyecto
+        const Utils = {
+            formatNumber(num, decimals = 0) {
+                if (num === undefined || num === null || isNaN(num)) {
+                    return '0';
+                }
+                
+                return new Intl.NumberFormat('es-MX', {
+                    minimumFractionDigits: decimals,
+                    maximumFractionDigits: decimals
+                }).format(num);
+            },
+            
+            formatCurrency(amount, currency = 'USD') {
+                if (amount === undefined || amount === null || isNaN(amount)) {
+                    return '$0.00';
+                }
+                
+                try {
+                    return new Intl.NumberFormat('en-US', {
+                        style: 'currency',
+                        currency: currency,
+                        minimumFractionDigits: 2
+                    }).format(amount);
+                } catch (error) {
+                    console.error('Error formatting currency:', error, amount);
+                    return `$${parseFloat(amount || 0).toFixed(2)}`;
+                }
+            }
+        };
+
+        const BenefitsCalculator = {
+            calculateTreeBenefits(diameter_cm, height_m, crown_diameter_m) {
+                // Validar y asegurar valores mínimos
+                diameter_cm = Math.max(parseFloat(diameter_cm) || 25, 10);
+                height_m = Math.max(parseFloat(height_m) || 6, 2);
+                crown_diameter_m = Math.max(parseFloat(crown_diameter_m) || (diameter_cm * 0.12), 1);
+                
+                console.log('Valores validados:', { diameter_cm, height_m, crown_diameter_m });
+                
+                // Convertir a unidades imperiales (fórmulas del U.S. Forest Service)
+                const diameter_inches = diameter_cm * 0.393701;
+                const height_feet = height_m * 3.28084;
+                const crown_diameter_feet = crown_diameter_m * 3.28084;
+                
+                // Área de copa en pies cuadrados
+                const crown_area_sqft = Math.PI * Math.pow(crown_diameter_feet / 2, 2);
+                
+                // 1. Stormwater intercepted (galones por año)
+                const stormwater_gallons = crown_area_sqft * 0.623; // Factor promedio árboles urbanos
+                const stormwater_value = stormwater_gallons * 0.01; // $0.01 por galón
+                
+                // 2. Energy conserved (kWh por año)  
+                const energy_kwh = crown_area_sqft * 0.84 * (height_feet / 30); // Factor escala altura
+                const energy_value = energy_kwh * 0.126; // $0.126 por kWh
+                
+                // 3. Air pollutants removed (libras por año)
+                const air_pollutants_lbs = (crown_area_sqft * 0.027) + (diameter_inches * 0.1);
+                const air_value = air_pollutants_lbs * 5.15; // $5.15 por libra
+                
+                // 4. Total Value of Annual Benefits
+                const total_value = stormwater_value + energy_value + air_value;
+                
+                return {
+                    stormwater: {
+                        amount: Math.round(stormwater_gallons),
+                        value: parseFloat(stormwater_value.toFixed(2)),
+                        unit: 'gallons',
+                        formatted: `${Utils.formatNumber(stormwater_gallons)} galones`
+                    },
+                    energy: {
+                        amount: Math.round(energy_kwh),
+                        value: parseFloat(energy_value.toFixed(2)),
+                        unit: 'kWh',
+                        formatted: `${Utils.formatNumber(energy_kwh)} kWh`
+                    },
+                    airPollutants: {
+                        amount: parseFloat(air_pollutants_lbs.toFixed(1)),
+                        value: parseFloat(air_value.toFixed(2)),
+                        unit: 'pounds',
+                        formatted: `${air_pollutants_lbs.toFixed(1)} libras`
+                    },
+                    totalValue: {
+                        amount: parseFloat(total_value.toFixed(2)),
+                        formatted: Utils.formatCurrency(total_value)
+                    }
+                };
+            }
+        };
+
+        // Función de prueba de cálculo
+        function testBenefitsCalculation() {
+            const container = document.getElementById('calc-results');
+            container.innerHTML = '<p>Calculando...</p>';
+            
+            try {
+                // Datos de prueba
+                const diameter = 30;
+                const height = 8;
+                const crownDiameter = 3.6;
+                
+                console.log('🧪 Test: Calculando beneficios para:', { diameter, height, crownDiameter });
+                const benefits = BenefitsCalculator.calculateTreeBenefits(diameter, height, crownDiameter);
+                console.log('🧪 Test: Beneficios calculados:', benefits);
+                
+                container.innerHTML = `
+                    <div class="success">✅ Cálculo exitoso</div>
+                    <div class="code-block">${JSON.stringify(benefits, null, 2)}</div>
+                `;
+            } catch (error) {
+                console.error('❌ Error en cálculo:', error);
+                container.innerHTML = `<div class="error">❌ Error: ${error.message}</div>`;
+            }
+        }
+
+        // Función de prueba de renderizado
+        function testHTMLRender() {
+            const container = document.getElementById('test-individual-benefits');
+            
+            try {
+                // Calcular beneficios de prueba
+                const benefits = BenefitsCalculator.calculateTreeBenefits(30, 8, 3.6);
+                console.log('🎨 Test: Renderizando beneficios:', benefits);
+                
+                container.innerHTML = `
+                    <div class="tree-benefit-item">
+                        <div class="benefit-icon water">
+                            💧
+                        </div>
+                        <div class="benefit-details">
+                            <div class="benefit-label">Agua de lluvia interceptada</div>
+                            <div class="benefit-value">${benefits.stormwater.formatted}</div>
+                            <div class="benefit-value-usd">${Utils.formatCurrency(benefits.stormwater.value)}</div>
+                        </div>
+                    </div>
+                    <div class="tree-benefit-item">
+                        <div class="benefit-icon energy">
+                            ⚡
+                        </div>
+                        <div class="benefit-details">
+                            <div class="benefit-label">Energía conservada</div>
+                            <div class="benefit-value">${benefits.energy.formatted}</div>
+                            <div class="benefit-value-usd">${Utils.formatCurrency(benefits.energy.value)}</div>
+                        </div>
+                    </div>
+                    <div class="tree-benefit-item">
+                        <div class="benefit-icon air">
+                            🌬️
+                        </div>
+                        <div class="benefit-details">
+                            <div class="benefit-label">Contaminantes del aire removidos</div>
+                            <div class="benefit-value">${benefits.airPollutants.formatted}</div>
+                            <div class="benefit-value-usd">${Utils.formatCurrency(benefits.airPollutants.value)}</div>
+                        </div>
+                    </div>
+                    <div class="tree-benefit-item total">
+                        <div class="total-label"><strong>Valor Total Anual</strong></div>
+                        <div class="total-value"><strong>${benefits.totalValue.formatted}</strong></div>
+                    </div>
+                `;
+                
+                console.log('✅ HTML renderizado exitosamente');
+            } catch (error) {
+                console.error('❌ Error en renderizado:', error);
+                container.innerHTML = `<div class="error">❌ Error en renderizado: ${error.message}</div>`;
+            }
+        }
+
+        // Función de prueba de selectores DOM
+        function testDOMSelectors() {
+            const container = document.getElementById('dom-results');
+            const tests = [];
+            
+            // Test del contenedor de beneficios
+            const benefitsContainer = document.getElementById('test-individual-benefits');
+            tests.push({
+                test: 'Selector #test-individual-benefits',
+                result: benefitsContainer ? '✅ Encontrado' : '❌ No encontrado',
+                status: benefitsContainer ? 'success' : 'error'
+            });
+            
+            // Test del contenedor principal
+            const mainContainer = document.getElementById('calc-results');
+            tests.push({
+                test: 'Selector #calc-results',
+                result: mainContainer ? '✅ Encontrado' : '❌ No encontrado',
+                status: mainContainer ? 'success' : 'error'
+            });
+            
+            // Simular el selector del proyecto real
+            const realSelector = document.getElementById('individual-benefits');
+            tests.push({
+                test: 'Selector #individual-benefits (del proyecto real)',
+                result: realSelector ? '✅ Encontrado' : '❌ No encontrado (normal en esta página)',
+                status: realSelector ? 'success' : 'warning'
+            });
+            
+            container.innerHTML = tests.map(test => 
+                `<div class="${test.status}">
+                    <strong>${test.test}:</strong> ${test.result}
+                </div>`
+            ).join('');
+        }
+
+        // Función de prueba de utilitarios
+        function testUtilityFunctions() {
+            const container = document.getElementById('utils-results');
+            const tests = [];
+            
+            // Test formatNumber
+            try {
+                const numTest = Utils.formatNumber(1234.567, 1);
+                tests.push({
+                    test: 'Utils.formatNumber(1234.567, 1)',
+                    result: `✅ Resultado: ${numTest}`,
+                    status: 'success'
+                });
+            } catch (error) {
+                tests.push({
+                    test: 'Utils.formatNumber',
+                    result: `❌ Error: ${error.message}`,
+                    status: 'error'
+                });
+            }
+            
+            // Test formatCurrency
+            try {
+                const currTest = Utils.formatCurrency(15.75);
+                tests.push({
+                    test: 'Utils.formatCurrency(15.75)',
+                    result: `✅ Resultado: ${currTest}`,
+                    status: 'success'
+                });
+            } catch (error) {
+                tests.push({
+                    test: 'Utils.formatCurrency',
+                    result: `❌ Error: ${error.message}`,
+                    status: 'error'
+                });
+            }
+            
+            container.innerHTML = tests.map(test => 
+                `<div class="${test.status}">
+                    <strong>${test.test}:</strong><br>${test.result}
+                </div>`
+            ).join('');
+        }
+
+        // Auto-ejecutar tests al cargar
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('🔧 Página de debug cargada');
+        });
+    </script>
+</body>
+</html>

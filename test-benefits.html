@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test HMOTREE Benefits</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-container { max-width: 600px; margin: 0 auto; }
+        .result { background: #f5f5f5; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .error { background: #ffe6e6; color: #d00; }
+        .success { background: #e6ffe6; color: #080; }
+    </style>
+</head>
+<body>
+    <div class="test-container">
+        <h1>🌳 Test de Beneficios HMOTREE</h1>
+        <div id="test-results"></div>
+        
+        <!-- Elemento para probar individual-benefits -->
+        <div style="margin-top: 30px;">
+            <h3>Panel de Beneficios (simulado):</h3>
+            <div id="individual-benefits" style="border: 1px solid #ccc; padding: 15px; border-radius: 5px;">
+                <!-- Aquí se mostrarán los beneficios -->
+            </div>
+        </div>
+        
+        <button onclick="testBenefits()" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">
+            🧪 Probar Cálculo de Beneficios
+        </button>
+    </div>
+
+    <script src="script_new.js"></script>
+    <script>
+        function testBenefits() {
+            console.log('🧪 Iniciando test de beneficios...');
+            
+            const results = document.getElementById('test-results');
+            results.innerHTML = '';
+            
+            try {
+                // Test 1: Verificar que Utils está disponible
+                if (typeof Utils === 'undefined') {
+                    throw new Error('Utils no está definido');
+                }
+                addResult('✅ Utils está disponible', 'success');
+                
+                // Test 2: Verificar formatCurrency
+                const testCurrency = Utils.formatCurrency(123.45);
+                addResult(`✅ formatCurrency funciona: ${testCurrency}`, 'success');
+                
+                // Test 3: Verificar BenefitsCalculator
+                if (typeof BenefitsCalculator === 'undefined') {
+                    throw new Error('BenefitsCalculator no está definido');
+                }
+                addResult('✅ BenefitsCalculator está disponible', 'success');
+                
+                // Test 4: Calcular beneficios con datos de prueba
+                const testBenefits = BenefitsCalculator.calculateTreeBenefits(51.3, 10.1, 8.4);
+                addResult(`✅ Beneficios calculados: ${JSON.stringify(testBenefits, null, 2)}`, 'success');
+                
+                // Test 5: Verificar UI
+                if (typeof UI === 'undefined') {
+                    throw new Error('UI no está definido');
+                }
+                addResult('✅ UI está disponible', 'success');
+                
+                // Test 6: Probar updateIndividualBenefits
+                UI.updateIndividualBenefits(testBenefits);
+                addResult('✅ updateIndividualBenefits ejecutado', 'success');
+                
+            } catch (error) {
+                addResult(`❌ Error: ${error.message}`, 'error');
+                console.error('Error en test:', error);
+            }
+        }
+        
+        function addResult(message, type) {
+            const results = document.getElementById('test-results');
+            const div = document.createElement('div');
+            div.className = `result ${type}`;
+            div.textContent = message;
+            results.appendChild(div);
+        }
+        
+        // Auto-ejecutar test al cargar
+        window.onload = () => {
+            setTimeout(testBenefits, 1000);
+        };
+    </script>
+</body>
+</html>

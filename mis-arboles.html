@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Mis Árboles - Hermosillo Tree Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Fallback styles para asegurar que el header sea visible */
+    .header {
+      display: flex !important;
+      background: #2D5016 !important;
+      min-height: 80px !important;
+      padding: 12px 20px !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      position: relative !important;
+      z-index: 1000 !important;
+    }
+    
+    .main-nav {
+      display: flex !important;
+      gap: 16px !important;
+    }
+    
+    .main-nav a {
+      color: #A4C3B2 !important;
+      text-decoration: none !important;
+      padding: 6px 12px !important;
+      border-radius: 6px !important;
+    }
+    
+    .main-nav a:hover,
+    .main-nav a.active {
+      background: rgba(255,255,255,0.1) !important;
+      color: #FEFCF3 !important;
+    }
+    
+    .site-title {
+      color: #FEFCF3 !important;
+      font-weight: 700 !important;
+      font-size: 1.2rem !important;
+    }
+    
+    .site-tagline {
+      color: #A4C3B2 !important;
+      font-size: 0.75rem !important;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-section">
+      <img src="icon.svg" alt="Logo Hermosillo Parks" class="logo">
+      <div>
+        <div class="site-title">Hermosillo Tree Map</div>
+        <div class="site-tagline">Explora y cuida el bosque urbano de Hermosillo</div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Mapa</a>
+      <a href="metodologia.html">Metodología</a>
+      <a href="mis-arboles.html" class="active">Mis Árboles</a>
+      <a href="aprender.html">Aprender</a>
+      <a href="grupos.html">Grupos</a>
+    </nav>
+    <div class="header-controls">
+      <a href="index.html" class="ctrl back-to-map">🗺️ Volver al Mapa</a>
+    </div>
+  </header>
+
+  <div class="page-container">
+    <main class="page-content">
+      <div class="my-trees-content">
+        <div class="page-header">
+          <h1>🌳 Mis Árboles Adoptados</h1>
+          <p class="subtitle">Gestiona y da seguimiento a los árboles que has adoptado en Hermosillo</p>
+        </div>
+
+        <!-- Login/Register Section -->
+        <div class="auth-section" id="auth-section">
+          <div class="auth-container">
+            <h2>Inicia Sesión para Ver Tus Árboles</h2>
+            <p>Regístrate o inicia sesión para adoptar árboles y llevar un registro de tu impacto en el bosque urbano de Hermosillo.</p>
+            
+            <div class="auth-tabs">
+              <button class="auth-tab active" onclick="showLogin()">Iniciar Sesión</button>
+              <button class="auth-tab" onclick="showRegister()">Registrarse</button>
+            </div>
+
+            <div class="auth-form" id="login-form">
+              <form>
+                <div class="form-group">
+                  <label for="email">Correo Electrónico</label>
+                  <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                  <label for="password">Contraseña</label>
+                  <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="auth-btn">Iniciar Sesión</button>
+              </form>
+            </div>
+
+            <div class="auth-form hidden" id="register-form">
+              <form>
+                <div class="form-group">
+                  <label for="name">Nombre Completo</label>
+                  <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                  <label for="reg-email">Correo Electrónico</label>
+                  <input type="email" id="reg-email" required>
+                </div>
+                <div class="form-group">
+                  <label for="reg-password">Contraseña</label>
+                  <input type="password" id="reg-password" required>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Teléfono (Opcional)</label>
+                  <input type="tel" id="phone">
+                </div>
+                <button type="submit" class="auth-btn">Registrarse</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- User Dashboard (Hidden initially) -->
+        <div class="user-dashboard hidden" id="user-dashboard">
+          <div class="dashboard-header">
+            <div class="user-info">
+              <div class="user-avatar">👤</div>
+              <div class="user-details">
+                <h3 id="user-name">Juan Pérez</h3>
+                <p>Guardián de Árboles desde Mayo 2024</p>
+              </div>
+            </div>
+            <div class="user-stats">
+              <div class="stat-card">
+                <span class="stat-number" id="trees-adopted">3</span>
+                <span class="stat-label">Árboles Adoptados</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number" id="co2-saved">156</span>
+                <span class="stat-label">kg CO₂ Ahorrados</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-number" id="water-saved">2,340</span>
+                <span class="stat-label">Litros Agua Gestionados</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="adopted-trees">
+            <h2>🌲 Mis Árboles Adoptados</h2>
+            
+            <div class="trees-grid">
+              <div class="tree-card">
+                <div class="tree-image">
+                  <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=300&h=200&fit=crop" alt="Mezquite">
+                  <div class="tree-status healthy">Saludable</div>
+                </div>
+                <div class="tree-info">
+                  <h3>Mezquite #001</h3>
+                  <p class="tree-location">📍 Parque Madero, Sector A</p>
+                  <p class="adoption-date">Adoptado: 15 May 2024</p>
+                  
+                  <div class="tree-metrics">
+                    <div class="metric">
+                      <span class="metric-label">Altura:</span>
+                      <span class="metric-value">4.2m</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">DAP:</span>
+                      <span class="metric-value">12cm</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">Última inspección:</span>
+                      <span class="metric-value">2 Jul 2025</span>
+                    </div>
+                  </div>
+
+                  <div class="tree-actions">
+                    <button class="action-btn primary">📋 Ver Detalles</button>
+                    <button class="action-btn">📝 Reportar Cuidado</button>
+                    <button class="action-btn">📍 Ver en Mapa</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tree-card">
+                <div class="tree-image">
+                  <img src="https://images.unsplash.com/photo-1574263867128-b70edafe0c0d?w=300&h=200&fit=crop" alt="Palo Verde">
+                  <div class="tree-status needs-attention">Necesita Atención</div>
+                </div>
+                <div class="tree-info">
+                  <h3>Palo Verde #015</h3>
+                  <p class="tree-location">📍 Parque Madero, Sector B</p>
+                  <p class="adoption-date">Adoptado: 22 Jun 2024</p>
+                  
+                  <div class="tree-metrics">
+                    <div class="metric">
+                      <span class="metric-label">Altura:</span>
+                      <span class="metric-value">3.8m</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">DAP:</span>
+                      <span class="metric-value">9cm</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">Última inspección:</span>
+                      <span class="metric-value">28 Jun 2025</span>
+                    </div>
+                  </div>
+
+                  <div class="care-alert">
+                    ⚠️ Requiere riego adicional debido al calor extremo
+                  </div>
+
+                  <div class="tree-actions">
+                    <button class="action-btn primary">📋 Ver Detalles</button>
+                    <button class="action-btn urgent">💧 Programar Riego</button>
+                    <button class="action-btn">📍 Ver en Mapa</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tree-card">
+                <div class="tree-image">
+                  <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=300&h=200&fit=crop" alt="Ironwood">
+                  <div class="tree-status healthy">Saludable</div>
+                </div>
+                <div class="tree-info">
+                  <h3>Ironwood #008</h3>
+                  <p class="tree-location">📍 Parque Madero, Sector C</p>
+                  <p class="adoption-date">Adoptado: 10 Jun 2024</p>
+                  
+                  <div class="tree-metrics">
+                    <div class="metric">
+                      <span class="metric-label">Altura:</span>
+                      <span class="metric-value">2.1m</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">DAP:</span>
+                      <span class="metric-value">6cm</span>
+                    </div>
+                    <div class="metric">
+                      <span class="metric-label">Última inspección:</span>
+                      <span class="metric-value">1 Jul 2025</span>
+                    </div>
+                  </div>
+
+                  <div class="tree-actions">
+                    <button class="action-btn primary">📋 Ver Detalles</button>
+                    <button class="action-btn">📝 Reportar Cuidado</button>
+                    <button class="action-btn">📍 Ver en Mapa</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="care-history">
+            <h2>📅 Historial de Cuidados</h2>
+            
+            <div class="history-timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">2 Jul 2025</div>
+                <div class="timeline-content">
+                  <h4>💧 Riego realizado - Mezquite #001</h4>
+                  <p>Riego profundo aplicado. Árbol en excelente condición.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-date">1 Jul 2025</div>
+                <div class="timeline-content">
+                  <h4>🔍 Inspección - Ironwood #008</h4>
+                  <p>Revisión general. Se removieron malezas alrededor de la base.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-date">28 Jun 2025</div>
+                <div class="timeline-content">
+                  <h4>⚠️ Alerta - Palo Verde #015</h4>
+                  <p>Se detectó estrés hídrico. Programado riego adicional.</p>
+                </div>
+              </div>
+              
+              <div class="timeline-item">
+                <div class="timeline-date">25 Jun 2025</div>
+                <div class="timeline-content">
+                  <h4>🌿 Mantenimiento - Todos los árboles</h4>
+                  <p>Aplicación de mantillo orgánico y fertilizante natural.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="adoption-section">
+            <h2>🌱 Adoptar Más Árboles</h2>
+            <p>¿Listo para adoptar más árboles? Explora el mapa para encontrar árboles disponibles para adopción.</p>
+            
+            <div class="adoption-stats">
+              <div class="stat">
+                <span class="number">12</span>
+                <span class="label">Árboles Disponibles</span>
+              </div>
+              <div class="stat">
+                <span class="number">5</span>
+                <span class="label">Necesitan Cuidado Urgente</span>
+              </div>
+            </div>
+            
+            <div class="adoption-actions">
+              <a href="index.html" class="btn-primary">🗺️ Explorar Mapa de Árboles</a>
+              <button class="btn-secondary">📋 Lista de Árboles Disponibles</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    function showLogin() {
+      document.getElementById('login-form').classList.remove('hidden');
+      document.getElementById('register-form').classList.add('hidden');
+      document.querySelectorAll('.auth-tab').forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    function showRegister() {
+      document.getElementById('register-form').classList.remove('hidden');
+      document.getElementById('login-form').classList.add('hidden');
+      document.querySelectorAll('.auth-tab').forEach(tab => tab.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+    // Simular login para demo
+    document.addEventListener('DOMContentLoaded', function() {
+      // Para propósitos de demo, mostrar dashboard después de 2 segundos
+      // En una implementación real, esto se activaría tras un login exitoso
+      setTimeout(() => {
+        document.getElementById('auth-section').classList.add('hidden');
+        document.getElementById('user-dashboard').classList.remove('hidden');
+      }, 2000);
+    });
+  </script>
+</body>
+</html>

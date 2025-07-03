@@ -38,18 +38,34 @@ const APP_CONFIG = {
     'default': '#4CAF50'
   },
   
-  // Fotos por especie (mejoradas)
+  // Fotos por especie (mejoradas con imágenes específicas de alta calidad)
   speciesPhotos: {
-    'Madera Amarilla': 'https://images.unsplash.com/photo-1574263867128-01fd5d7dffdb?w=400&h=300&fit=crop',
-    'Mezquite Dulce': 'https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400&h=300&fit=crop',
-    'Tepeguaje': 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop',
-    'Guajillo': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop',
-    'Fresno de Arizona': 'https://images.unsplash.com/photo-1564417976456-86f72ad3ad3a?w=400&h=300&fit=crop',
-    'Palo Brea': 'https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=400&h=300&fit=crop',
-    'Encino Negrito': 'https://images.unsplash.com/photo-1567473165131-45c5b3142ff8?w=400&h=300&fit=crop',
-    'Trinquete': 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?w=400&h=300&fit=crop',
-    'Jaguarcillo': 'https://images.unsplash.com/photo-1609686667015-c0ad91b81b3e?w=400&h=300&fit=crop',
-    'Palo Verde': 'https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400&h=300&fit=crop'
+    // Por nombre común
+    'Madera Amarilla': 'https://images.unsplash.com/photo-1574263867128-01fd5d7dffdb?w=400&h=300&fit=crop&q=80',
+    'Mezquite Dulce': 'https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400&h=300&fit=crop&q=80',
+    'Tepeguaje': 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop&q=80',
+    'Guajillo': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&q=80',
+    'Fresno de Arizona': 'https://images.unsplash.com/photo-1564417976456-86f72ad3ad3a?w=400&h=300&fit=crop&q=80',
+    'Palo Brea': 'https://images.unsplash.com/photo-1600298881974-6be191ceeda1?w=400&h=300&fit=crop&q=80',
+    'Encino Negrito': 'https://images.unsplash.com/photo-1567473165131-45c5b3142ff8?w=400&h=300&fit=crop&q=80',
+    'Trinquete': 'https://images.unsplash.com/photo-1520637836862-4d197d17c90a?w=400&h=300&fit=crop&q=80',
+    'Jaguarcillo': 'https://images.unsplash.com/photo-1609686667015-c0ad91b81b3e?w=400&h=300&fit=crop&q=80',
+    'Palo Verde': 'https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400&h=300&fit=crop&q=80',
+    'Mezquite': 'https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400&h=300&fit=crop&q=80',
+    'Palo Fierro': 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&h=300&fit=crop&q=80',
+    'Ocotillo': 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=300&fit=crop&q=80',
+    'Ironwood': 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&h=300&fit=crop&q=80',
+    
+    // Por nombre científico
+    'Lysiloma divaricatum': 'https://images.unsplash.com/photo-1574263867128-01fd5d7dffdb?w=400&h=300&fit=crop&q=80',
+    'Prosopis glandulosa': 'https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400&h=300&fit=crop&q=80',
+    'Leucaena leucocephala': 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=400&h=300&fit=crop&q=80',
+    'Acacia farnesiana': 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=400&h=300&fit=crop&q=80',
+    'Fraxinus velutina': 'https://images.unsplash.com/photo-1564417976456-86f72ad3ad3a?w=400&h=300&fit=crop&q=80',
+    'Parkinsonia florida': 'https://images.unsplash.com/photo-1560707303-4e980ce876ad?w=400&h=300&fit=crop&q=80',
+    'Olneya tesota': 'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&h=300&fit=crop&q=80',
+    'Prosopis velutina': 'https://images.unsplash.com/photo-1596906792781-e1b525e28a34?w=400&h=300&fit=crop&q=80',
+    'Fouquieria splendens': 'https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=400&h=300&fit=crop&q=80'
   },
   
   // Transiciones
@@ -127,11 +143,20 @@ const Utils = {
   
   // Formatear moneda
   formatCurrency(amount, currency = 'USD') {
-    return new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: currency,
-      minimumFractionDigits: 2
-    }).format(amount);
+    if (amount === undefined || amount === null || isNaN(amount)) {
+      return '$0.00';
+    }
+    
+    try {
+      return new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: currency,
+        minimumFractionDigits: 2
+      }).format(amount);
+    } catch (error) {
+      console.error('Error formatting currency:', error, amount);
+      return `$${parseFloat(amount || 0).toFixed(2)}`;
+    }
   },
   
   // Debounce para búsquedas
@@ -144,6 +169,148 @@ const Utils = {
       };
       clearTimeout(timeout);
       timeout = setTimeout(later, wait);
+    };
+  },
+  
+  /**
+   * Sistema mejorado de carga de imágenes con fallbacks
+   */
+  loadImageWithFallback(imgElement, primaryUrl, fallbackUrls = []) {
+    const urls = [primaryUrl, ...fallbackUrls];
+    let currentIndex = 0;
+    
+    // Reset del estado de la imagen
+    imgElement.classList.remove('loaded');
+    imgElement.style.opacity = '0';
+    
+    const tryLoadImage = () => {
+      if (currentIndex >= urls.length) {
+        // Si todas las URLs fallan, mostrar placeholder SVG
+        imgElement.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgdmlld0JveD0iMCAwIDQwMCAzMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iMzAwIiBmaWxsPSIjRjBGOUZGIi8+CjxwYXRoIGQ9Ik0yMDAgMTAwVjIwMCIgc3Ryb2tlPSIjNENBRjUwIiBzdHJva2Utd2lkdGg9IjQiLz4KPHBhdGggZD0iTTE1MCAyMDBMMjAwIDE1MEwyNTAgMjAwIiBzdHJva2U9IiM0Q0FGNTAII3N0cm9rZS13aWR0aD0iNCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjEzMCIgcj0iMjAiIGZpbGw9IiM0Q0FGNTAII+CjCl0ZXh0IHg9IjIwMCIgeT0iMjUwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iSW50ZXIiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2Njc5OEEiPsOBcmJvbCBVcmJhbm88L3RleHQ+Cjwvc3ZnPgo=';
+        imgElement.classList.add('loaded');
+        imgElement.style.opacity = '1';
+        return;
+      }
+      
+      const currentUrl = urls[currentIndex];
+      const testImg = new Image();
+      
+      testImg.onload = () => {
+        imgElement.src = currentUrl;
+        imgElement.classList.add('loaded');
+        imgElement.style.opacity = '1';
+      };
+      
+      testImg.onerror = () => {
+        currentIndex++;
+        tryLoadImage();
+      };
+      
+      testImg.src = currentUrl;
+    };
+   },
+
+  /**
+   * Obtener información botánica enriquecida por especie
+   */
+  getEnrichedSpeciesInfo(species) {
+    const commonName = this.getCommonName(species);
+    const scientificName = this.getScientificName(species);
+    
+    // Base de datos de información botánica
+    const speciesDB = {
+      'Madera Amarilla': {
+        family: 'Fabaceae',
+        distribution: 'Suroeste de EE.UU., noroeste de México',
+        habitat: 'Bosques secos, zonas áridas',
+        characteristics: {
+          forma: 'Árbol mediano, copa densa',
+          hoja: 'Compuesta, bipinnada',
+          tronco: 'Corteza lisa, gris claro',
+          mantenimiento: 'Bajo'
+        },
+        observations: [
+          'Resistente a sequías prolongadas',
+          'Crecimiento moderado en clima urbano',
+          'Tolerante a suelos pobres'
+        ],
+        biodiversity: [
+          'Refugio para aves urbanas',
+          'Atrae polinizadores nativos',
+          'Importante para ecosistema sonorense'
+        ]
+      },
+      'Mezquite Dulce': {
+        family: 'Fabaceae',
+        distribution: 'Desierto Sonorense, sur de Arizona',
+        habitat: 'Zonas áridas urbanas, suelos rocosos',
+        characteristics: {
+          forma: 'Árbol bajo, copa extendida',
+          hoja: 'Bipinnada, verde claro',
+          tronco: 'Corteza rugosa, café oscuro',
+          mantenimiento: 'Muy bajo'
+        },
+        observations: [
+          'Extremadamente resistente a sequía',
+          'Raíces profundas (hasta 50m)',
+          'Produce vainas comestibles'
+        ],
+        biodiversity: [
+          'Alimento para fauna desértica',
+          'Refugio para reptiles y aves',
+          'Especie clave del ecosistema'
+        ]
+      },
+      'Palo Verde': {
+        family: 'Fabaceae',
+        distribution: 'Desierto Sonorense',
+        habitat: 'Lechos de arroyos, bajadas',
+        characteristics: {
+          forma: 'Árbol mediano, corteza verde',
+          hoja: 'Pequeñas, caducas en sequía',
+          tronco: 'Verde fotosintético',
+          mantenimiento: 'Muy bajo'
+        },
+        observations: [
+          'Fotosíntesis en corteza verde',
+          'Pierde hojas en sequía extrema',
+          'Floración amarilla espectacular'
+        ],
+        biodiversity: [
+          'Árbol estatal de Arizona',
+          'Néctar para abejas nativas',
+          'Refugio para aves migratorias'
+        ]
+      }
+    };
+    
+    // Información por defecto si no se encuentra
+    const defaultInfo = {
+      family: 'No disponible',
+      distribution: 'Región sonorense',
+      habitat: 'Zonas áridas urbanas',
+      characteristics: {
+        forma: 'Árbol urbano adaptado',
+        hoja: 'Adaptada al clima árido',
+        tronco: 'Resistente',
+        mantenimiento: 'Moderado'
+      },
+      observations: [
+        'Adaptado al clima de Hermosillo',
+        'Tolerante a condiciones urbanas',
+        'Contribuye al bosque urbano'
+      ],
+      biodiversity: [
+        'Refugio para fauna urbana',
+        'Mejora calidad del aire',
+        'Parte del ecosistema urbano'
+      ]
+    };
+    
+    return {
+      commonName,
+      scientificName,
+      info: speciesDB[commonName] || defaultInfo
     };
   }
 };
@@ -161,6 +328,13 @@ const BenefitsCalculator = {
    * @returns {object} Beneficios calculados
    */
   calculateTreeBenefits(diameter_cm, height_m, crown_diameter_m) {
+    // Validar y asegurar valores mínimos
+    diameter_cm = Math.max(parseFloat(diameter_cm) || 25, 10);
+    height_m = Math.max(parseFloat(height_m) || 6, 2);
+    crown_diameter_m = Math.max(parseFloat(crown_diameter_m) || (diameter_cm * 0.12), 1);
+    
+    console.log('Valores validados:', { diameter_cm, height_m, crown_diameter_m });
+    
     // Convertir a unidades imperiales (fórmulas del U.S. Forest Service)
     const diameter_inches = diameter_cm * 0.393701;
     const height_feet = height_m * 3.28084;
@@ -189,7 +363,7 @@ const BenefitsCalculator = {
         amount: Math.round(stormwater_gallons),
         value: parseFloat(stormwater_value.toFixed(2)),
         unit: 'gallons',
-        formatted: `${Utils.formatNumber(stormwater_gallons)} litros`
+        formatted: `${Utils.formatNumber(stormwater_gallons)} galones`
       },
       energy: {
         amount: Math.round(energy_kwh),
@@ -200,8 +374,8 @@ const BenefitsCalculator = {
       airPollutants: {
         amount: parseFloat(air_pollutants_lbs.toFixed(1)),
         value: parseFloat(air_value.toFixed(2)),
-        unit: 'kg',
-        formatted: `${air_pollutants_lbs.toFixed(1)} kg`
+        unit: 'pounds',
+        formatted: `${air_pollutants_lbs.toFixed(1)} libras`
       },
       totalValue: {
         amount: parseFloat(total_value.toFixed(2)),
@@ -401,29 +575,149 @@ const MapManager = {
   bindTreePopup(feature, layer) {
     const props = feature.properties;
     
+    // Calcular beneficios correctamente
+    const diameter = props.diameter_cm || 25;
+    const height = props.height_m || 6;
+    const crownDiameter = props.crown_diameter || (diameter * 0.12);
+    const benefits = BenefitsCalculator.calculateTreeBenefits(diameter, height, crownDiameter);
+    
+    // Obtener información botánica enriquecida
+    const speciesInfo = Utils.getEnrichedSpeciesInfo(props.species);
+    const { commonName, scientificName, info } = speciesInfo;
+    
     const popupContent = `
-      <div class="tree-popup">
-        <h3>${Utils.getCommonName(props.species)}</h3>
-        <p class="scientific-name">${Utils.getScientificName(props.species)}</p>
-        <div class="tree-stats">
-          <div><strong>ID:</strong> ${props.id}</div>
-          <div><strong>Diámetro:</strong> ${props.diameter_cm || 'N/A'} cm</div>
-          <div><strong>Altura:</strong> ${props.height_m || 'N/A'} m</div>
+      <div class="tree-popup-botanical">
+        <!-- Header con logo institucional -->
+        <div class="popup-header-botanical">
+          <div class="institutional-logo">
+            <i class="fas fa-leaf"></i>
+          </div>
+          <div class="tree-id-corner">#${props.id}</div>
         </div>
-        <button onclick="UI.showTreeDetails('${props.id}')" class="view-details-btn">
-          Ver Detalles Completos
-        </button>
+        
+        <!-- Nombre científico principal -->
+        <div class="species-title-section">
+          <h1 class="scientific-name">${scientificName}</h1>
+          <div class="common-names">
+            <div class="name-row">
+              <span class="name-label">Nombre común:</span>
+              <span class="name-value">${commonName}</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Información taxonómica -->
+        <div class="taxonomic-info">
+          <div class="tax-row">
+            <span class="tax-label">Familia:</span>
+            <span class="tax-value">${info.family}</span>
+          </div>
+          <div class="tax-row">
+            <span class="tax-label">Distribución:</span>
+            <span class="tax-value">${info.distribution}</span>
+          </div>
+          <div class="tax-row">
+            <span class="tax-label">Hábitat:</span>
+            <span class="tax-value">${info.habitat}</span>
+          </div>
+        </div>
+        
+        <!-- Datos generales con iconografía -->
+        <div class="general-data-section">
+          <div class="section-header-orange">DATOS GENERALES</div>
+          <div class="characteristics-grid">
+            <div class="char-item">
+              <div class="char-icon forma">
+                <i class="fas fa-tree"></i>
+              </div>
+              <span class="char-label">FORMA</span>
+            </div>
+            <div class="char-item">
+              <div class="char-icon hoja">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <span class="char-label">HOJA</span>
+            </div>
+            <div class="char-item">
+              <div class="char-icon trunk">
+                <i class="fas fa-grip-lines-vertical"></i>
+              </div>
+              <span class="char-label">TRONCO</span>
+            </div>
+            <div class="char-item">
+              <div class="char-icon maintenance">
+                <i class="fas fa-tools"></i>
+              </div>
+              <span class="char-label">MANTENIMIENTO</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Usos -->
+        <div class="uses-section">
+          <div class="uses-grid">
+            <div class="use-category">
+              <div class="use-header">PAISAJÍSTICOS</div>
+              <div class="use-icons">
+                <div class="use-line"></div>
+                <div class="use-line"></div>
+                <div class="use-line"></div>
+              </div>
+            </div>
+            <div class="use-separator"></div>
+            <div class="use-category">
+              <div class="use-header">COMUNES</div>
+              <div class="use-icons">
+                <i class="fas fa-utensils"></i>
+                <i class="fas fa-plus"></i>
+                <i class="fas fa-industry"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Observaciones y biodiversidad -->
+        <div class="observations-section">
+          <div class="obs-column">
+            <h4>OBSERVACIONES</h4>
+            <ul class="obs-list">
+              ${info.observations.map(obs => `<li>${obs}</li>`).join('')}
+            </ul>
+          </div>
+          <div class="bio-column">
+            <h4>BIODIVERSIDAD</h4>
+            <ul class="bio-list">
+              ${info.biodiversity.map(bio => `<li>${bio}</li>`).join('')}
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Botón para ver datos técnicos -->
+        <div class="popup-action-botanical">
+          <button onclick="UI.showTreeDetails('${props.id}')" class="btn-technical-data">
+            <i class="fas fa-chart-line"></i>
+            Ver Datos Técnicos y Beneficios
+          </button>
+        </div>
       </div>
     `;
     
     layer.bindPopup(popupContent, {
-      maxWidth: 300,
-      className: 'custom-popup'
+      maxWidth: 400,
+      minWidth: 350,
+      className: 'tree-popup-botanical-container',
+      closeButton: true,
+      autoClose: false,
+      closeOnEscapeKey: true,
+      autoPan: true,
+      keepInView: true
     });
     
     // Click handler para mostrar en panel
     layer.on('click', () => {
+      console.log('🖱️ Clic en árbol detectado:', props.id);
       AppState.selectedTree = feature;
+      console.log('🌳 Árbol seleccionado actualizado:', AppState.selectedTree);
       UI.showTreeDetails(props.id);
     });
   },
@@ -517,14 +811,11 @@ const UI = {
    * Configurar navegación principal
    */
   setupNavigation() {
-    console.log('🧭 Configurando navegación...');
     const navBtns = document.querySelectorAll('.nav-btn');
-    console.log('📋 Encontrados', navBtns.length, 'botones de navegación');
     
     navBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         const section = btn.dataset.section;
-        console.log('🔘 Click en botón:', section);
         this.showSection(section);
         
         // Actualizar estado activo
@@ -666,7 +957,6 @@ const UI = {
    * Mostrar sección específica
    */
   showSection(sectionName) {
-    console.log('🔄 Cambiando a sección:', sectionName);
     AppState.currentSection = sectionName;
     
     // Ocultar todas las secciones
@@ -678,9 +968,6 @@ const UI = {
     const targetSection = document.getElementById(`${sectionName}-section`);
     if (targetSection) {
       targetSection.classList.add('active');
-      console.log('✅ Sección activada:', sectionName);
-    } else {
-      console.error('❌ No se encontró la sección:', `${sectionName}-section`);
     }
     
     // Lógica específica por sección
@@ -708,14 +995,12 @@ const UI = {
    */
   togglePanel() {
     const panel = document.querySelector('.info-panel');
-    if (!panel) return;
-    
     AppState.panelOpen = !AppState.panelOpen;
     
     if (AppState.panelOpen) {
-      panel.classList.remove('hidden');
+      panel.style.transform = 'translateX(0)';
     } else {
-      panel.classList.add('hidden');
+      panel.style.transform = 'translateX(-100%)';
     }
   },
   
@@ -742,12 +1027,17 @@ const UI = {
    * Mostrar detalles de un árbol específico
    */
   showTreeDetails(treeId) {
+    console.log('🌳 showTreeDetails llamado para:', treeId);
     const tree = AppState.treesData.find(t => t.properties.id === treeId);
-    if (!tree) return;
+    if (!tree) {
+      console.error('❌ Árbol no encontrado:', treeId);
+      return;
+    }
     
     AppState.selectedTree = tree;
     const props = tree.properties;
     
+    console.log('🎯 Cambiando a vista de árbol...');
     // Actualizar título del panel
     document.getElementById('panel-title').textContent = Utils.getCommonName(props.species);
     
@@ -756,6 +1046,7 @@ const UI = {
       view.classList.remove('active');
     });
     document.getElementById('tree-content').classList.add('active');
+    console.log('📋 Panel de árbol activado');
     
     // Actualizar contenido
     this.updateTreeContent(tree);
@@ -765,6 +1056,17 @@ const UI = {
       const [lng, lat] = tree.geometry.coordinates;
       AppState.map.setView([lat, lng], Math.max(AppState.map.getZoom(), 18));
     }
+    
+    // Verificar que el contenedor de beneficios existe después de actualizar
+    setTimeout(() => {
+      const benefitsContainer = document.getElementById('individual-benefits');
+      console.log('🔍 Verificación post-actualización - Container de beneficios:', benefitsContainer);
+      if (benefitsContainer) {
+        console.log('✅ Container encontrado después de actualización');
+      } else {
+        console.error('❌ Container NO encontrado después de actualización');
+      }
+    }, 100);
   },
   
   /**
@@ -777,13 +1079,13 @@ const UI = {
     this.updateElement('total-benefits', Utils.formatCurrency(stats.totalBenefitsValue));
     
     // Beneficios específicos
-    this.updateElement('stormwater-total', `${Utils.formatNumber(stats.totalStormwater)} litros`);
+    this.updateElement('stormwater-total', `${Utils.formatNumber(stats.totalStormwater)} gallons`);
     this.updateElement('stormwater-value', Utils.formatCurrency(stats.totalStormwater * 0.01));
     
     this.updateElement('energy-total', `${Utils.formatNumber(stats.totalEnergy)} kWh`);
     this.updateElement('energy-value', Utils.formatCurrency(stats.totalEnergy * 0.126));
     
-    this.updateElement('air-total', `${stats.totalAirPollutants} kg`);
+    this.updateElement('air-total', `${stats.totalAirPollutants} pounds`);
     this.updateElement('air-value', Utils.formatCurrency(stats.totalAirPollutants * 5.15));
     
     this.updateElement('total-annual-benefits', Utils.formatCurrency(stats.totalBenefitsValue));
@@ -791,31 +1093,69 @@ const UI = {
     // Actualizar especies comunes
     this.updateCommonSpecies(stats.speciesCount);
   },
-  
-  /**
+    this.updateElement('total-benefits', Utils.formatCurrency(stats.totalBenefitsValue));
+    /
+    // Beneficios específicos
+    this.updateElement('stormwater-total', `${Utils.formatNumber(stats.totalStormwater)} gallons`);
+    this.updateElement('stormwater-value', Utils.formatCurrency(stats.totalStormwater * 0.01));
+    // Información básica
+    this.updateElement('energy-total', `${Utils.formatNumber(stats.totalEnergy)} kWh`);
+    this.updateElement('energy-value', Utils.formatCurrency(stats.totalEnergy * 0.126));
+    this.updateElement('tree-scientific-name', Utils.getScientificName(props.species));
+    this.updateElement('air-total', `${stats.totalAirPollutants} pounds`);
+    this.updateElement('air-value', Utils.formatCurrency(stats.totalAirPollutants * 5.15));
+    // Foto - usar primero la URL del árbol específico, luego la configuración por especie
+    this.updateElement('total-annual-benefits', Utils.formatCurrency(stats.totalBenefitsValue));
+    const speciesName = Utils.getCommonName(props.species);
+    // Actualizar especies comunesetScientificName(props.species);
+    this.updateCommonSpecies(stats.speciesCount);
+  },if (treeImage) {
+      // Crear array de URLs con fallbacks
+  /** const imageUrls = [];
    * Actualizar contenido del árbol seleccionado
-   */
-  updateTreeContent(tree) {
-    const props = tree.properties;
-    
+   */ // 1. URL específica del árbol
+  updateTreeContent(tree) {& props.photo_url.trim() !== '') {
+    const props = tree.properties;_url);
+      }
     // Información básica
     this.updateElement('tree-id-badge', props.id);
     this.updateElement('tree-species-name', Utils.getCommonName(props.species));
     this.updateElement('tree-scientific-name', Utils.getScientificName(props.species));
     this.updateElement('tree-location', this.generateAddress());
-    
-    // Foto
+      
+    // Foto - usar primero la URL del árbol específico, luego la configuración por especie
     const treeImage = document.getElementById('tree-image');
-    const speciesName = Utils.getCommonName(props.species);
-    const photoUrl = APP_CONFIG.speciesPhotos[speciesName] || 
-                     'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop';
-    
-    if (treeImage) {
-      treeImage.src = photoUrl;
+    const speciesName = Utils.getCommonName(props.species);ame]);
+    const scientificName = Utils.getScientificName(props.species);
+      
+    if (treeImage) {defecto
+      // Crear array de URLs con fallbacksash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop&q=80');
+      const imageUrls = [];
+      // Usar el sistema mejorado de carga
+      // 1. URL específica del árboleImage, imageUrls[0], imageUrls.slice(1));
+      if (props.photo_url && props.photo_url.trim() !== '') {
+        imageUrls.push(props.photo_url);
+      }
+       Detalles del árbol
+      // 2. URL por nombre comúnmeter', props.diameter_cm ? `${props.diameter_cm} cm` : 'No disponible');
+      if (APP_CONFIG.speciesPhotos[speciesName]) {_m ? `${props.height_m} m` : 'No disponible');
+        imageUrls.push(APP_CONFIG.speciesPhotos[speciesName]);{props.crown_diameter} m` : 'No disponible');
+      }s.updateElement('tree-year', props.planted_year || 'No disponible');
+      is.updateElement('tree-health', props.health || 'No disponible');
+      // 3. URL por nombre científico
+      if (APP_CONFIG.speciesPhotos[scientificName]) {
+        imageUrls.push(APP_CONFIG.speciesPhotos[scientificName]);
+      }st height = props.height_m || 6;
+      nst crownDiameter = props.crown_diameter || (diameter * 0.12);
+      // 4. URL por defecto
+      imageUrls.push('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop&q=80');
+      nst benefits = BenefitsCalculator.calculateTreeBenefits(diameter, height, crownDiameter);
+      // Usar el sistema mejorado de cargabenefits);
+      this.loadImageWithFallback(treeImage, imageUrls[0], imageUrls.slice(1));
       treeImage.alt = `Foto de ${speciesName}`;
     }
-    
-    // Detalles del árbol
+    *
+    // Detalles del árbols individuales del árbol
     this.updateElement('tree-diameter', props.diameter_cm ? `${props.diameter_cm} cm` : 'No disponible');
     this.updateElement('tree-height', props.height_m ? `${props.height_m} m` : 'No disponible');
     this.updateElement('tree-crown', props.crown_diameter ? `${props.crown_diameter} m` : 'No disponible');
@@ -823,39 +1163,48 @@ const UI = {
     this.updateElement('tree-health', props.health || 'No disponible');
     
     // Calcular y mostrar beneficios individuales
-    const diameter = props.diameter_cm || 25;
+    const diameter = props.diameter_cm || 25;edor individual-benefits');
     const height = props.height_m || 6;
     const crownDiameter = props.crown_diameter || (diameter * 0.12);
     
+    console.log('🧮 Calculando beneficios para:', { diameter, height, crownDiameter });
     const benefits = BenefitsCalculator.calculateTreeBenefits(diameter, height, crownDiameter);
-    this.updateIndividualBenefits(benefits);
-  },
-  
-  /**
+    console.log('📊 Beneficios calculados:', benefits);
+          <i class="fas fa-tint"></i>
+    // Usar setTimeout para asegurar que el DOM esté listo
+    setTimeout(() => {nefit-details">
+      this.updateIndividualBenefits(benefits);luvia interceptada</div>
+    }, 50);div class="benefit-value">${benefits.stormwater.formatted}</div>
+  },      <div class="benefit-value-usd">${Utils.formatCurrency(benefits.stormwater.value)}</div>
+        </div>
+  /** </div>
    * Actualizar beneficios individuales del árbol
-   */
+   */   <div class="benefit-icon energy">
   updateIndividualBenefits(benefits) {
+    console.log('🌳 updateIndividualBenefits llamada con:', benefits);
     const container = document.getElementById('individual-benefits');
-    if (!container) return;
-    
-    container.innerHTML = `
-      <div class="tree-benefit-item">
-        <span class="tree-benefit-label">Agua interceptada:</span>
-        <span class="tree-benefit-value">${benefits.stormwater.formatted} (${Utils.formatCurrency(benefits.stormwater.value)})</span>
+    console.log('🔍 Container encontrado:', container);</div>
+          <div class="benefit-value">${benefits.energy.formatted}</div>
+          <div class="benefit-value-usd">${Utils.formatCurrency(benefits.energy.value)}</div>
+        </div>
       </div>
       <div class="tree-benefit-item">
-        <span class="tree-benefit-label">Energía ahorrada:</span>
-        <span class="tree-benefit-value">${benefits.energy.formatted} (${Utils.formatCurrency(benefits.energy.value)})</span>
-      </div>
-      <div class="tree-benefit-item">
-        <span class="tree-benefit-label">Contaminantes del aire removidos:</span>
-        <span class="tree-benefit-value">${benefits.airPollutants.formatted} (${Utils.formatCurrency(benefits.airPollutants.value)})</span>
+        <div class="benefit-icon air">
+          <i class="fas fa-wind"></i>
+        </div>
+        <div class="benefit-details">
+          <div class="benefit-label">Contaminantes del aire removidos</div>
+          <div class="benefit-value">${benefits.airPollutants.formatted}</div>
+          <div class="benefit-value-usd">${Utils.formatCurrency(benefits.airPollutants.value)}</div>
+        </div>
       </div>
       <div class="tree-benefit-item total">
-        <span class="tree-benefit-label"><strong>Valor Anual Total:</strong></span>
-        <span class="tree-benefit-value"><strong>${benefits.totalValue.formatted}</strong></span>
+        <div class="total-label"><strong>Valor Total Anual</strong></div>
+        <div class="total-value"><strong>${benefits.totalValue.formatted}</strong></div>
       </div>
     `;
+    
+    console.log('✅ HTML de beneficios actualizado en el contenedor');
   },
   
   /**

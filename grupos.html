@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Grupos - Hermosillo Tree Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Fallback styles para asegurar que el header sea visible */
+    .header {
+      display: flex !important;
+      background: #2D5016 !important;
+      min-height: 80px !important;
+      padding: 12px 20px !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      position: relative !important;
+      z-index: 1000 !important;
+    }
+    
+    .main-nav {
+      display: flex !important;
+      gap: 16px !important;
+    }
+    
+    .main-nav a {
+      color: #A4C3B2 !important;
+      text-decoration: none !important;
+      padding: 6px 12px !important;
+      border-radius: 6px !important;
+    }
+    
+    .main-nav a:hover,
+    .main-nav a.active {
+      background: rgba(255,255,255,0.1) !important;
+      color: #FEFCF3 !important;
+    }
+    
+    .site-title {
+      color: #FEFCF3 !important;
+      font-weight: 700 !important;
+      font-size: 1.2rem !important;
+    }
+    
+    .site-tagline {
+      color: #A4C3B2 !important;
+      font-size: 0.75rem !important;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-section">
+      <img src="icon.svg" alt="Logo Hermosillo Parks" class="logo">
+      <div>
+        <div class="site-title">Hermosillo Tree Map</div>
+        <div class="site-tagline">Explora y cuida el bosque urbano de Hermosillo</div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Mapa</a>
+      <a href="metodologia.html">Metodología</a>
+      <a href="mis-arboles.html">Mis Árboles</a>
+      <a href="aprender.html">Aprender</a>
+      <a href="grupos.html" class="active">Grupos</a>
+    </nav>
+    <div class="header-controls">
+      <a href="index.html" class="ctrl back-to-map">🗺️ Volver al Mapa</a>
+    </div>
+  </header>
+
+  <div class="page-container">
+    <main class="page-content">
+      <div class="groups-content">
+        <div class="page-header">
+          <h1>👥 Grupos de Guardianes</h1>
+          <p class="subtitle">Únete a grupos locales de voluntarios dedicados al cuidado del bosque urbano de Hermosillo</p>
+        </div>
+
+        <div class="groups-intro">
+          <div class="intro-content">
+            <h2>🌳 Construyendo Comunidad Verde</h2>
+            <p>Los grupos de guardianes de árboles son el corazón de nuestro movimiento de conservación urbana. Cada grupo se enfoca en una zona específica de Hermosillo, creando vínculos comunitarios fuertes mientras cuidamos nuestro patrimonio natural.</p>
+          </div>
+          <div class="intro-stats">
+            <div class="stat-item">
+              <span class="stat-number">8</span>
+              <span class="stat-label">Grupos Activos</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">145</span>
+              <span class="stat-label">Voluntarios</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">12</span>
+              <span class="stat-label">Eventos Mensuales</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="groups-grid">
+          <div class="group-card featured">
+            <div class="group-header">
+              <div class="group-icon">🌲</div>
+              <div class="group-info">
+                <h3>Guardianes del Centro</h3>
+                <p class="group-location">📍 Centro Histórico</p>
+                <p class="group-members">👥 32 miembros activos</p>
+              </div>
+            </div>
+            <div class="group-description">
+              <p>Nos enfocamos en mantener y expandir la cobertura arbórea del centro histórico de Hermosillo. Organizamos eventos semanales de cuidado y educación ambiental.</p>
+            </div>
+            <div class="group-stats">
+              <div class="stat">
+                <span class="number">78</span>
+                <span class="label">Árboles Cuidados</span>
+              </div>
+              <div class="stat">
+                <span class="number">15</span>
+                <span class="label">Nuevas Plantaciones</span>
+              </div>
+            </div>
+            <div class="group-next-event">
+              <h4>🗓️ Próximo Evento</h4>
+              <p><strong>Taller de Poda</strong> - Sábado 6 Julio, 8:00 AM</p>
+              <p>Plaza Zaragoza</p>
+            </div>
+            <div class="group-actions">
+              <button class="btn-primary">Unirse al Grupo</button>
+              <button class="btn-secondary">Ver Detalles</button>
+            </div>
+          </div>
+
+          <div class="group-card">
+            <div class="group-header">
+              <div class="group-icon">🏞️</div>
+              <div class="group-info">
+                <h3>Eco-Vecinos Parque Madero</h3>
+                <p class="group-location">📍 Parque Madero</p>
+                <p class="group-members">👥 28 miembros activos</p>
+              </div>
+            </div>
+            <div class="group-description">
+              <p>Grupo especializado en el mantenimiento integral del Parque Madero. Trabajamos en coordinación con el Ayuntamiento para preservar este importante pulmón verde.</p>
+            </div>
+            <div class="group-stats">
+              <div class="stat">
+                <span class="number">45</span>
+                <span class="label">Árboles Cuidados</span>
+              </div>
+              <div class="stat">
+                <span class="number">8</span>
+                <span class="label">Especies Nativas</span>
+              </div>
+            </div>
+            <div class="group-next-event">
+              <h4>🗓️ Próximo Evento</h4>
+              <p><strong>Jornada de Riego</strong> - Domingo 7 Julio, 7:00 AM</p>
+              <p>Entrada principal del parque</p>
+            </div>
+            <div class="group-actions">
+              <button class="btn-primary">Unirse al Grupo</button>
+              <button class="btn-secondary">Ver Detalles</button>
+            </div>
+          </div>
+
+          <div class="group-card">
+            <div class="group-header">
+              <div class="group-icon">🌱</div>
+              <div class="group-info">
+                <h3>Verdes Universitarios</h3>
+                <p class="group-location">📍 Zona Universidad</p>
+                <p class="group-members">👥 19 miembros activos</p>
+              </div>
+            </div>
+            <div class="group-description">
+              <p>Estudiantes y profesores universitarios comprometidos con la investigación y cuidado de árboles urbanos. Enfoque científico y educativo.</p>
+            </div>
+            <div class="group-stats">
+              <div class="stat">
+                <span class="number">34</span>
+                <span class="label">Árboles Cuidados</span>
+              </div>
+              <div class="stat">
+                <span class="number">6</span>
+                <span class="label">Estudios Realizados</span>
+              </div>
+            </div>
+            <div class="group-next-event">
+              <h4>🗓️ Próximo Evento</h4>
+              <p><strong>Monitoreo de Salud Arbórea</strong> - Viernes 5 Julio, 6:00 PM</p>
+              <p>Campus Universidad de Sonora</p>
+            </div>
+            <div class="group-actions">
+              <button class="btn-primary">Unirse al Grupo</button>
+              <button class="btn-secondary">Ver Detalles</button>
+            </div>
+          </div>
+
+          <div class="group-card">
+            <div class="group-header">
+              <div class="group-icon">🏘️</div>
+              <div class="group-info">
+                <h3>Árbol Familia Norte</h3>
+                <p class="group-location">📍 Colonias Norte</p>
+                <p class="group-members">👥 22 miembros activos</p>
+              </div>
+            </div>
+            <div class="group-description">
+              <p>Familias de las colonias del norte de Hermosillo trabajando juntas para crear espacios verdes más seguros y saludables para nuestros niños.</p>
+            </div>
+            <div class="group-stats">
+              <div class="stat">
+                <span class="number">56</span>
+                <span class="label">Árboles Cuidados</span>
+              </div>
+              <div class="stat">
+                <span class="number">12</span>
+                <span class="label">Escuelas Involucradas</span>
+              </div>
+            </div>
+            <div class="group-next-event">
+              <h4>🗓️ Próximo Evento</h4>
+              <p><strong>Día Familiar de Plantación</strong> - Sábado 6 Julio, 9:00 AM</p>
+              <p>Parque de la Colonia San Benito</p>
+            </div>
+            <div class="group-actions">
+              <button class="btn-primary">Unirse al Grupo</button>
+              <button class="btn-secondary">Ver Detalles</button>
+            </div>
+          </div>
+
+          <div class="group-card">
+            <div class="group-header">
+              <div class="group-icon">🌴</div>
+              <div class="group-info">
+                <h3>Defensores del Desierto</h3>
+                <p class="group-location">📍 Zona Fovisste</p>
+                <p class="group-members">👥 16 miembros activos</p>
+              </div>
+            </div>
+            <div class="group-description">
+              <p>Especialistas en especies nativas del desierto sonorense. Promovemos la plantación de árboles resistentes al clima local.</p>
+            </div>
+            <div class="group-stats">
+              <div class="stat">
+                <span class="number">29</span>
+                <span class="label">Árboles Nativos</span>
+              </div>
+              <div class="stat">
+                <span class="number">95%</span>
+                <span class="label">Tasa de Supervivencia</span>
+              </div>
+            </div>
+            <div class="group-next-event">
+              <h4>🗓️ Próximo Evento</h4>
+              <p><strong>Taller de Especies Nativas</strong> - Domingo 7 Julio, 10:00 AM</p>
+              <p>Vivero Municipal</p>
+            </div>
+            <div class="group-actions">
+              <button class="btn-primary">Unirse al Grupo</button>
+              <button class="btn-secondary">Ver Detalles</button>
+            </div>
+          </div>
+
+          <div class="group-card">
+            <div class="group-header">
+              <div class="group-icon">🌿</div>
+              <div class="group-info">
+                <h3>Juventud Verde</h3>
+                <p class="group-location">📍 Múltiples ubicaciones</p>
+                <p class="group-members">👥 24 miembros activos</p>
+              </div>
+            </div>
+            <div class="group-description">
+              <p>Jóvenes entre 16-25 años comprometidos con el cambio climático y la acción ambiental local. Activismo y educación ambiental.</p>
+            </div>
+            <div class="group-stats">
+              <div class="stat">
+                <span class="number">42</span>
+                <span class="label">Árboles Cuidados</span>
+              </div>
+              <div class="stat">
+                <span class="number">1,200</span>
+                <span class="label">Estudiantes Educados</span>
+              </div>
+            </div>
+            <div class="group-next-event">
+              <h4>🗓️ Próximo Evento</h4>
+              <p><strong>Campaña en Redes Sociales</strong> - Lunes 8 Julio, 7:00 PM</p>
+              <p>Virtual - Zoom</p>
+            </div>
+            <div class="group-actions">
+              <button class="btn-primary">Unirse al Grupo</button>
+              <button class="btn-secondary">Ver Detalles</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="create-group-section">
+          <h2>🚀 Crea Tu Propio Grupo</h2>
+          <p>¿No encuentras un grupo en tu zona? ¡Forma el tuyo! Te ayudamos con capacitación, materiales y coordinación con otros grupos.</p>
+          
+          <div class="create-group-benefits">
+            <div class="benefit">
+              <div class="benefit-icon">📚</div>
+              <h3>Capacitación Gratuita</h3>
+              <p>Cursos de liderazgo y conocimiento técnico</p>
+            </div>
+            <div class="benefit">
+              <div class="benefit-icon">🛠️</div>
+              <h3>Herramientas y Materiales</h3>
+              <p>Kit básico de herramientas para empezar</p>
+            </div>
+            <div class="benefit">
+              <div class="benefit-icon">🤝</div>
+              <h3>Red de Apoyo</h3>
+              <p>Conexión con grupos experimentados</p>
+            </div>
+            <div class="benefit">
+              <div class="benefit-icon">📊</div>
+              <h3>Seguimiento y Métricas</h3>
+              <p>Sistema de tracking de impacto</p>
+            </div>
+          </div>
+          
+          <div class="create-group-actions">
+            <button class="btn-primary large">📝 Iniciar Proceso de Creación</button>
+            <button class="btn-secondary">📞 Hablar con un Coordinador</button>
+          </div>
+        </div>
+
+        <div class="events-calendar">
+          <h2>📅 Calendario de Eventos Comunitarios</h2>
+          
+          <div class="calendar-grid">
+            <div class="event-card urgent">
+              <div class="event-date">
+                <span class="day">5</span>
+                <span class="month">Jul</span>
+              </div>
+              <div class="event-info">
+                <h3>Monitoreo de Salud Arbórea</h3>
+                <p>👥 Verdes Universitarios</p>
+                <p>📍 Campus Universidad de Sonora</p>
+                <p>🕕 6:00 PM</p>
+              </div>
+              <button class="event-btn">Unirse</button>
+            </div>
+
+            <div class="event-card">
+              <div class="event-date">
+                <span class="day">6</span>
+                <span class="month">Jul</span>
+              </div>
+              <div class="event-info">
+                <h3>Taller de Poda</h3>
+                <p>👥 Guardianes del Centro</p>
+                <p>📍 Plaza Zaragoza</p>
+                <p>🕗 8:00 AM</p>
+              </div>
+              <button class="event-btn">Unirse</button>
+            </div>
+
+            <div class="event-card">
+              <div class="event-date">
+                <span class="day">6</span>
+                <span class="month">Jul</span>
+              </div>
+              <div class="event-info">
+                <h3>Día Familiar de Plantación</h3>
+                <p>👥 Árbol Familia Norte</p>
+                <p>📍 Parque Colonia San Benito</p>
+                <p>🕘 9:00 AM</p>
+              </div>
+              <button class="event-btn">Unirse</button>
+            </div>
+
+            <div class="event-card">
+              <div class="event-date">
+                <span class="day">7</span>
+                <span class="month">Jul</span>
+              </div>
+              <div class="event-info">
+                <h3>Jornada de Riego</h3>
+                <p>👥 Eco-Vecinos Parque Madero</p>
+                <p>📍 Parque Madero</p>
+                <p>🕖 7:00 AM</p>
+              </div>
+              <button class="event-btn">Unirse</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="success-stories">
+          <h2>🏆 Historias de Éxito</h2>
+          
+          <div class="stories-grid">
+            <div class="story-card">
+              <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=400&h=250&fit=crop" alt="Plantación comunitaria">
+              </div>
+              <div class="story-content">
+                <h3>Transformación del Parque Infantil</h3>
+                <p class="story-group">👥 Árbol Familia Norte</p>
+                <p>En 6 meses, convirtieron un terreno baldío en un hermoso parque con 25 árboles nativos. Ahora es el lugar favorito de las familias del sector.</p>
+                <div class="story-impact">
+                  <span class="impact-metric">25 árboles plantados</span>
+                  <span class="impact-metric">200 familias beneficiadas</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="story-card">
+              <div class="story-image">
+                <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400&h=250&fit=crop" alt="Estudiantes cuidando árboles">
+              </div>
+              <div class="story-content">
+                <h3>Programa Escuelas Verdes</h3>
+                <p class="story-group">👥 Juventud Verde</p>
+                <p>Implementaron programas de educación ambiental en 8 escuelas, enseñando a 1,200 estudiantes sobre el cuidado de árboles urbanos.</p>
+                <div class="story-impact">
+                  <span class="impact-metric">8 escuelas participantes</span>
+                  <span class="impact-metric">1,200 estudiantes educados</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

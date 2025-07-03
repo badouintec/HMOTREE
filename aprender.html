@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Aprender - Hermosillo Tree Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* Fallback styles para asegurar que el header sea visible */
+    .header {
+      display: flex !important;
+      background: #2D5016 !important;
+      min-height: 80px !important;
+      padding: 12px 20px !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      width: 100% !important;
+      position: relative !important;
+      z-index: 1000 !important;
+    }
+    
+    .main-nav {
+      display: flex !important;
+      gap: 16px !important;
+    }
+    
+    .main-nav a {
+      color: #A4C3B2 !important;
+      text-decoration: none !important;
+      padding: 6px 12px !important;
+      border-radius: 6px !important;
+    }
+    
+    .main-nav a:hover,
+    .main-nav a.active {
+      background: rgba(255,255,255,0.1) !important;
+      color: #FEFCF3 !important;
+    }
+    
+    .site-title {
+      color: #FEFCF3 !important;
+      font-weight: 700 !important;
+      font-size: 1.2rem !important;
+    }
+    
+    .site-tagline {
+      color: #A4C3B2 !important;
+      font-size: 0.75rem !important;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo-section">
+      <img src="icon.svg" alt="Logo Hermosillo Parks" class="logo">
+      <div>
+        <div class="site-title">Hermosillo Tree Map</div>
+        <div class="site-tagline">Explora y cuida el bosque urbano de Hermosillo</div>
+      </div>
+    </div>
+    <nav class="main-nav">
+      <a href="index.html">Mapa</a>
+      <a href="metodologia.html">Metodología</a>
+      <a href="mis-arboles.html">Mis Árboles</a>
+      <a href="aprender.html" class="active">Aprender</a>
+      <a href="grupos.html">Grupos</a>
+    </nav>
+    <div class="header-controls">
+      <a href="index.html" class="ctrl back-to-map">🗺️ Volver al Mapa</a>
+    </div>
+  </header>
+
+  <div class="page-container">
+    <main class="page-content">
+      <div class="learn-content">
+        <div class="learn-hero">
+          <div class="hero-content">
+            <h1>🌱 Cuidando los Árboles Urbanos</h1>
+            <h2>Guía Completa para Guardianes de Árboles en Hermosillo</h2>
+            <p>Nuestros voluntarios guardianes de árboles nos ayudan a mantener nuestros árboles urbanos saludables y fuertes para las generaciones futuras. Aprende actividades básicas y avanzadas de cuidado arbóreo que puedes hacer para ayudar a nuestro bosque urbano.</p>
+          </div>
+          <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=600&h=400&fit=crop" alt="Voluntarios cuidando árboles" />
+          </div>
+        </div>
+
+        <div class="stewardship-info">
+          <p class="stewardship-description">
+            ¡Es fácil convertirse en un guardián de árboles! Organizamos voluntarios durante todo el año. Podemos entrenarte en actividades básicas como regar árboles, agregar mantillo y tierra, y remover malezas y basura; así como actividades avanzadas como instalar protectores de árboles, expandir jardineras, y remover pavimento de piedra o ladrillo.
+          </p>
+          <a href="#contacto" class="cta-button">APRENDE MÁS SOBRE GUARDIANES DE ÁRBOLES HMO</a>
+        </div>
+
+        <div class="tree-care-section">
+          <h2 class="section-title">
+            <span class="title-accent">Actividades Básicas</span>
+            <span class="title-main">de Cuidado Arbóreo</span>
+          </h2>
+          
+          <div class="care-activities-grid">
+            <div class="activity-card">
+              <div class="activity-icon">💧</div>
+              <div class="activity-content">
+                <h3>Riego / Agua</h3>
+                <p>Regar es lo más importante que puedes hacer por tu árbol urbano. Durante el clima seco de Hermosillo, los árboles necesitan agua suplementaria para sobrevivir y prosperar.</p>
+                <div class="activity-tips">
+                  <h4>Consejos para riego:</h4>
+                  <ul>
+                    <li>Riega temprano en la mañana o al atardecer</li>
+                    <li>Aplica agua lentamente y profundamente</li>
+                    <li>Evita mojar las hojas para prevenir hongos</li>
+                    <li>En verano, riega 2-3 veces por semana</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity-card">
+              <div class="activity-icon">🌿</div>
+              <div class="activity-content">
+                <h3>Control de Malezas</h3>
+                <p>Si las malezas se dejan sin atender, eventualmente competirán con el árbol por nutrientes y agua. Por eso las malezas deben removerse de las jardineras frecuentemente.</p>
+                <div class="activity-tips">
+                  <h4>Técnicas de control:</h4>
+                  <ul>
+                    <li>Remueve malezas cuando el suelo esté húmedo</li>
+                    <li>Corta desde la raíz, no solo la parte visible</li>
+                    <li>Aplica mantillo para prevenir nuevas malezas</li>
+                    <li>Evita herbicidas cerca de árboles jóvenes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity-card featured">
+              <div class="activity-icon">🗑️</div>
+              <div class="activity-content">
+                <h3>Limpieza de Residuos</h3>
+                <p>Mantener un sitio libre de basura no solo asegura su lugar como un activo comunitario, también reduce la cantidad de estrés puesto en la planta.</p>
+                <div class="activity-tips">
+                  <h4>Programa de limpieza:</h4>
+                  <ul>
+                    <li>Retira basura semanalmente</li>
+                    <li>Revisa que no haya vidrios rotos</li>
+                    <li>Limpia desechos de mascotas inmediatamente</li>
+                    <li>Reporta vandalismo a las autoridades</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity-card">
+              <div class="activity-icon">🪧</div>
+              <div class="activity-content">
+                <h3>Señalización Educativa</h3>
+                <p>Letreros dentro de una jardinera pueden informar a tu comunidad sobre problemas de desechos de mascotas o mostrar tu compromiso con ayudar a tu árbol urbano crecer.</p>
+                <div class="activity-tips">
+                  <h4>Ideas para señales:</h4>
+                  <ul>
+                    <li>"Árbol en crecimiento - Por favor no dañar"</li>
+                    <li>"Adopción de árbol por [Tu nombre]"</li>
+                    <li>"Prohibido arrojar basura"</li>
+                    <li>Información sobre la especie del árbol</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity-card">
+              <div class="activity-icon">🌺</div>
+              <div class="activity-content">
+                <h3>Plantación de Vegetación Acompañante</h3>
+                <p>Agregar plantas nativas alrededor de tu árbol urbano ayuda a retener humedad, prevenir malezas y crear un ecosistema más saludable para el crecimiento del árbol.</p>
+                <div class="activity-tips">
+                  <h4>Plantas recomendadas para Sonora:</h4>
+                  <ul>
+                    <li>Lavanda del desierto (Hyptis emoryi)</li>
+                    <li>Salvia (Salvia greggii)</li>
+                    <li>Brittle bush (Encelia farinosa)</li>
+                    <li>Desert marigold (Baileya multiradiata)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="activity-card">
+              <div class="activity-icon">✂️</div>
+              <div class="activity-content">
+                <h3>Poda y Mantenimiento</h3>
+                <p>La poda correcta ayuda a mantener la salud del árbol y previene ramas peligrosas. Siempre consulta con expertos antes de podar árboles grandes.</p>
+                <div class="activity-tips">
+                  <h4>Reglas básicas de poda:</h4>
+                  <ul>
+                    <li>Solo poda ramas muertas, dañadas o enfermas</li>
+                    <li>Nunca podes más del 25% del follaje</li>
+                    <li>Usa herramientas limpias y afiladas</li>
+                    <li>Para árboles grandes, contrata un arborista</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="species-section">
+          <h2>🌳 Especies Nativas de Hermosillo</h2>
+          <p>Conoce las especies de árboles nativos que mejor se adaptan al clima de Hermosillo:</p>
+          
+          <div class="species-grid">
+            <div class="species-card">
+              <div class="species-image">🌲</div>
+              <h3>Mezquite (Prosopis velutina)</h3>
+              <p>Árbol resistente a la sequía, excelente para sombra. Crece rápido y requiere poco mantenimiento.</p>
+              <div class="species-care">
+                <strong>Cuidados:</strong> Riego moderado, poda en invierno
+              </div>
+            </div>
+            
+            <div class="species-card">
+              <div class="species-image">🌳</div>
+              <h3>Palo Verde (Parkinsonia florida)</h3>
+              <p>Árbol oficial de Arizona, produce hermosas flores amarillas. Muy resistente al calor extremo.</p>
+              <div class="species-care">
+                <strong>Cuidados:</strong> Riego esporádico, exposición solar plena
+              </div>
+            </div>
+            
+            <div class="species-card">
+              <div class="species-image">🌿</div>
+              <h3>Ironwood (Olneya tesota)</h3>
+              <p>Árbol de crecimiento lento pero muy longevo. Proporciona excelente sombra densa.</p>
+              <div class="species-care">
+                <strong>Cuidados:</strong> Riego mínimo, protección inicial del viento
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tools-section">
+          <h2>🛠️ Herramientas Esenciales</h2>
+          <div class="tools-grid">
+            <div class="tool-item">
+              <div class="tool-icon">🪣</div>
+              <h3>Regadera o Manguera</h3>
+              <p>Para riego profundo y eficiente</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">🧤</div>
+              <h3>Guantes de Jardinería</h3>
+              <p>Protección para manos al trabajar</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">🔨</div>
+              <h3>Herramientas de Mano</h3>
+              <p>Pala pequeña, tijeras de podar</p>
+            </div>
+            <div class="tool-item">
+              <div class="tool-icon">🏷️</div>
+              <h3>Etiquetas y Señales</h3>
+              <p>Para identificación y educación</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="community-section" id="contacto">
+          <h2>🤝 Únete a la Comunidad de Guardianes</h2>
+          <p>Conecta con otros guardianes de árboles en Hermosillo y participa en eventos de cuidado urbano.</p>
+          
+          <div class="community-info">
+            <div class="contact-card">
+              <h3>📧 Suscríbete al Newsletter</h3>
+              <p>Recibe tips mensuales de cuidado arbóreo y noticias sobre eventos comunitarios.</p>
+              <button class="community-btn">Suscribirse</button>
+            </div>
+            
+            <div class="contact-card">
+              <h3>📱 Síguenos en Redes</h3>
+              <p>Comparte tus experiencias y aprende de otros guardianes de árboles.</p>
+              <div class="social-links">
+                <button class="social-btn">Facebook</button>
+                <button class="social-btn">Instagram</button>
+                <button class="social-btn">Twitter</button>
+              </div>
+            </div>
+            
+            <div class="contact-card">
+              <h3>🗓️ Próximos Eventos</h3>
+              <p>Participa en jornadas de plantación y talleres de capacitación.</p>
+              <button class="community-btn">Ver Calendario</button>
+            </div>
+          </div>
+
+          <div class="volunteer-info">
+            <h3>¿Cómo convertirse en Guardián de Árboles?</h3>
+            <ol>
+              <li><strong>Regístrate:</strong> Completa el formulario de voluntario</li>
+              <li><strong>Capacítate:</strong> Asiste a un taller de introducción</li>
+              <li><strong>Adopta:</strong> Elige un árbol o área para cuidar</li>
+              <li><strong>Cuida:</strong> Implementa las actividades de mantenimiento</li>
+              <li><strong>Reporta:</strong> Comparte el progreso con la comunidad</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

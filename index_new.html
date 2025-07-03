@@ -18,7 +18,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.js"></script>
   
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="style_new.css"/>
 </head>
 <body>
   <!-- ============================================================================ -->
@@ -48,10 +48,6 @@
         <button class="nav-btn" data-section="benefits">
           <i class="fas fa-leaf"></i>
           <span>Beneficios</span>
-        </button>
-        <button class="nav-btn" data-section="methodology">
-          <i class="fas fa-microscope"></i>
-          <span>Metodología</span>
         </button>
         <button class="nav-btn" data-section="learn">
           <i class="fas fa-graduation-cap"></i>
@@ -144,7 +140,7 @@
                     </div>
                     <div class="benefit-details">
                       <div class="benefit-value" id="stormwater-total">—</div>
-                      <div class="benefit-label">Agua de lluvia interceptada</div>
+                      <div class="benefit-label">Stormwater intercepted</div>
                       <div class="benefit-value-usd" id="stormwater-value">—</div>
                     </div>
                   </div>
@@ -155,7 +151,7 @@
                     </div>
                     <div class="benefit-details">
                       <div class="benefit-value" id="energy-total">—</div>
-                      <div class="benefit-label">Energía conservada</div>
+                      <div class="benefit-label">Energy conserved</div>
                       <div class="benefit-value-usd" id="energy-value">—</div>
                     </div>
                   </div>
@@ -166,14 +162,14 @@
                     </div>
                     <div class="benefit-details">
                       <div class="benefit-value" id="air-total">—</div>
-                      <div class="benefit-label">Contaminantes del aire removidos</div>
+                      <div class="benefit-label">Air pollutants removed</div>
                       <div class="benefit-value-usd" id="air-value">—</div>
                     </div>
                   </div>
                 </div>
                 
                 <div class="total-benefits">
-                  <div class="total-label">Valor Total de Beneficios Anuales</div>
+                  <div class="total-label">Total Value of Annual Benefits</div>
                   <div class="total-value" id="total-annual-benefits">—</div>
                 </div>
               </div>
@@ -182,18 +178,6 @@
               <div class="species-section">
                 <h4><i class="fas fa-seedling"></i> Especies Más Comunes</h4>
                 <div id="common-species-list"></div>
-              </div>
-              
-              <!-- Leyenda de Colores -->
-              <div class="species-legend">
-                <h4><i class="fas fa-palette"></i> Leyenda de Especies</h4>
-                <div id="species-color-legend">
-                  <!-- Contenido generado dinámicamente -->
-                </div>
-                <div class="legend-note">
-                  <i class="fas fa-info-circle"></i>
-                  <span>Los colores representan diferentes familias botánicas del desierto sonorense</span>
-                </div>
               </div>
             </div>
             
@@ -332,271 +316,6 @@
       </div>
     </section>
     
-    <!-- ============================================================================ -->
-    <!-- SECCIÓN: METODOLOGÍA -->
-    <!-- ============================================================================ -->
-    <section id="methodology-section" class="app-section">
-      <div class="section-content">
-        <div class="section-header">
-          <h2>Metodología Científica</h2>
-          <p>Conoce cómo registramos árboles y calculamos beneficios ecológicos usando estándares del U.S. Forest Service</p>
-        </div>
-        
-        <div class="methodology-content">
-          <!-- Proceso de Registro de Árboles -->
-          <div class="methodology-block">
-            <div class="method-header">
-              <i class="fas fa-clipboard-list"></i>
-              <h3>1. Proceso de Registro de Árboles</h3>
-            </div>
-            <div class="method-content">
-              <div class="process-steps">
-                <div class="step-card">
-                  <div class="step-icon">
-                    <i class="fas fa-search-location"></i>
-                  </div>
-                  <div class="step-info">
-                    <h4>Localización en Campo</h4>
-                    <p>Cada árbol se geolocaliza usando GPS de alta precisión (±3 metros) para crear coordenadas exactas que permiten su identificación única en el mapa.</p>
-                  </div>
-                </div>
-                
-                <div class="step-card">
-                  <div class="step-icon">
-                    <i class="fas fa-ruler"></i>
-                  </div>
-                  <div class="step-info">
-                    <h4>Medición Física</h4>
-                    <p>Se mide el <strong>Diámetro a la Altura del Pecho (DAP)</strong> usando cinta diamétrica a 1.3m del suelo, y la <strong>altura total</strong> con clinómetro digital para determinar el volumen del árbol.</p>
-                  </div>
-                </div>
-                
-                <div class="step-card">
-                  <div class="step-icon">
-                    <i class="fas fa-leaf"></i>
-                  </div>
-                  <div class="step-info">
-                    <h4>Identificación Botánica</h4>
-                    <p>Especialistas en botánica identifican la especie usando características morfológicas (hojas, corteza, frutos) y referencias taxonómicas para especies de Sonora.</p>
-                  </div>
-                </div>
-                
-                <div class="step-card">
-                  <div class="step-icon">
-                    <i class="fas fa-camera"></i>
-                  </div>
-                  <div class="step-info">
-                    <h4>Documentación Visual</h4>
-                    <p>Se toman fotografías del árbol completo, hojas, corteza y entorno para crear un registro visual que permite verificación posterior y estudios fenológicos.</p>
-                  </div>
-                </div>
-                
-                <div class="step-card">
-                  <div class="step-icon">
-                    <i class="fas fa-database"></i>
-                  </div>
-                  <div class="step-info">
-                    <h4>Digitalización</h4>
-                    <p>Los datos se ingresan en sistemas GIS especializados, donde se validan coordenadas, se verifican mediciones y se asigna un ID único a cada árbol del inventario.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Cálculo de Beneficios Ecológicos -->
-          <div class="methodology-block">
-            <div class="method-header">
-              <i class="fas fa-calculator"></i>
-              <h3>2. Cálculo de Beneficios Ecológicos</h3>
-            </div>
-            <div class="method-content">
-              <p class="method-intro">Utilizamos las ecuaciones alométricas del <strong>U.S. Forest Service i-Tree Model</strong>, adaptadas para el clima árido de Sonora:</p>
-              
-              <div class="benefit-calculation">
-                <div class="calc-card">
-                  <div class="calc-header">
-                    <i class="fas fa-tint"></i>
-                    <h4>Interceptación de Agua de Lluvia</h4>
-                  </div>
-                  <div class="calc-content">
-                    <div class="formula">
-                      <strong>Fórmula:</strong> I = LAI × P × C × A
-                    </div>
-                    <div class="variables">
-                      <p><strong>I</strong> = Interceptación anual (litros)</p>
-                      <p><strong>LAI</strong> = Índice de Área Foliar (específico por especie)</p>
-                      <p><strong>P</strong> = Precipitación anual promedio (340mm en Hermosillo)</p>
-                      <p><strong>C</strong> = Coeficiente de interceptación (0.15-0.25)</p>
-                      <p><strong>A</strong> = Área de copa (π × radio²)</p>
-                    </div>
-                    <div class="explanation">
-                      <p>Los árboles interceptan agua de lluvia con sus hojas y ramas antes de que llegue al suelo, reduciendo la escorrentía urbana y recargando acuíferos localmente.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="calc-card">
-                  <div class="calc-header">
-                    <i class="fas fa-bolt"></i>
-                    <h4>Ahorro Energético</h4>
-                  </div>
-                  <div class="calc-content">
-                    <div class="formula">
-                      <strong>Fórmula:</strong> E = (Sombra × CDD × EF) + (ET × HDD × HF)
-                    </div>
-                    <div class="variables">
-                      <p><strong>E</strong> = Ahorro energético anual (kWh)</p>
-                      <p><strong>Sombra</strong> = Área de sombra proyectada (m²)</p>
-                      <p><strong>CDD</strong> = Grados-día de enfriamiento (3,200 en Hermosillo)</p>
-                      <p><strong>EF</strong> = Factor de eficiencia de enfriamiento (0.18 kWh/°C·día)</p>
-                      <p><strong>ET</strong> = Evapotranspiración (litros/día)</p>
-                      <p><strong>HDD</strong> = Grados-día de calentamiento (850 en Hermosillo)</p>
-                    </div>
-                    <div class="explanation">
-                      <p>Los árboles reducen temperatura ambiente mediante sombra directa y enfriamiento evaporativo, disminuyendo la demanda energética de edificios cercanos hasta en un 30%.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="calc-card">
-                  <div class="calc-header">
-                    <i class="fas fa-wind"></i>
-                    <h4>Purificación del Aire</h4>
-                  </div>
-                  <div class="calc-content">
-                    <div class="formula">
-                      <strong>Fórmula:</strong> AP = Σ(Pi × Vi × LAI × Ti)
-                    </div>
-                    <div class="variables">
-                      <p><strong>AP</strong> = Contaminantes removidos anualmente (kg)</p>
-                      <p><strong>Pi</strong> = Concentración del contaminante i (μg/m³)</p>
-                      <p><strong>Vi</strong> = Velocidad de deposición (m/s por contaminante)</p>
-                      <p><strong>LAI</strong> = Índice de Área Foliar</p>
-                      <p><strong>Ti</strong> = Tiempo de exposición anual (8,760 horas)</p>
-                    </div>
-                    <div class="explanation">
-                      <p>Se calculan: PM2.5, PM10, O₃, NO₂, SO₂ y CO. Los árboles filtran partículas y gases tóxicos mediante absorción foliar y deposición en superficie de hojas.</p>
-                    </div>
-                  </div>
-                </div>
-                
-                <div class="calc-card">
-                  <div class="calc-header">
-                    <i class="fas fa-dollar-sign"></i>
-                    <h4>Valor Económico Total</h4>
-                  </div>
-                  <div class="calc-content">
-                    <div class="formula">
-                      <strong>Fórmula:</strong> VT = VA + VE + VC + VR
-                    </div>
-                    <div class="variables">
-                      <p><strong>VT</strong> = Valor total anual (MXN)</p>
-                      <p><strong>VA</strong> = Valor interceptación agua × $0.015/litro</p>
-                      <p><strong>VE</strong> = Valor ahorro energético × $3.50/kWh</p>
-                      <p><strong>VC</strong> = Valor purificación aire × $850/kg CO₂eq</p>
-                      <p><strong>VR</strong> = Valor reducción temperatura × $50/°C reducido</p>
-                    </div>
-                    <div class="explanation">
-                      <p>Los valores económicos se basan en tarifas locales de servicios públicos de Hermosillo y costos de mitigación climática del IPCC, expresados en pesos mexicanos (2024).</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Validación y Limitaciones -->
-          <div class="methodology-block">
-            <div class="method-header">
-              <i class="fas fa-shield-alt"></i>
-              <h3>3. Validación y Limitaciones</h3>
-            </div>
-            <div class="method-content">
-              <div class="validation-grid">
-                <div class="validation-card">
-                  <h4>Control de Calidad</h4>
-                  <ul>
-                    <li>Verificación cruzada de identificaciones botánicas</li>
-                    <li>Validación GPS con cartografía oficial de INEGI</li>
-                    <li>Revisión estadística de datos atípicos</li>
-                    <li>Auditorías periódicas de campo (cada 6 meses)</li>
-                  </ul>
-                </div>
-                
-                <div class="validation-card">
-                  <h4>Limitaciones Reconocidas</h4>
-                  <ul>
-                    <li>Modelos calibrados para clima templado, adaptados para Sonora</li>
-                    <li>Variabilidad estacional no capturada completamente</li>
-                    <li>Efectos de sequía prolongada en árboles estresados</li>
-                    <li>Interacciones microclimáticas urbanas simplificadas</li>
-                  </ul>
-                </div>
-                
-                <div class="validation-card">
-                  <h4>Precisión Estimada</h4>
-                  <ul>
-                    <li>Interceptación de agua: ±15% (validado con pluviómetros)</li>
-                    <li>Ahorro energético: ±20% (comparado con medidores)</li>
-                    <li>Purificación aire: ±25% (rango típico i-Tree)</li>
-                    <li>Valoración económica: ±30% (volatilidad de precios)</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Referencias Científicas -->
-          <div class="methodology-block">
-            <div class="method-header">
-              <i class="fas fa-book"></i>
-              <h3>4. Referencias Científicas</h3>
-            </div>
-            <div class="method-content">
-              <div class="references-list">
-                <div class="reference-item">
-                  <strong>Nowak, D.J., Hirabayashi, S., Bodine, A., & Greenfield, E.</strong> (2014). 
-                  Tree and forest effects on air quality and human health in the United States. 
-                  <em>Environmental Pollution, 193</em>, 119-129.
-                </div>
-                
-                <div class="reference-item">
-                  <strong>McPherson, E.G., van Doorn, N., & de Goede, J.</strong> (2016). 
-                  The structure, function and value of urban forests in California communities. 
-                  <em>Urban Forestry & Urban Greening, 28</em>, 43-53.
-                </div>
-                
-                <div class="reference-item">
-                  <strong>Villegas, J.C., Breshears, D.D., Zou, C.B., & Law, D.J.</strong> (2010). 
-                  Ecohydrological controls of soil evaporation in deciduous drylands. 
-                  <em>Vadose Zone Journal, 9</em>(3), 422-431.
-                </div>
-                
-                <div class="reference-item">
-                  <strong>Gobierno de Sonora, IMPLAN Hermosillo</strong> (2022). 
-                  Plan Municipal de Desarrollo Urbano de Hermosillo 2018-2030. 
-                  <em>Actualización de Infraestructura Verde</em>.
-                </div>
-                
-                <div class="reference-item">
-                  <strong>USDA Forest Service</strong> (2023). 
-                  i-Tree User's Manual v6.0: Tools for assessing and managing forests and community trees. 
-                  <em>Northern Research Station, Syracuse, NY</em>.
-                </div>
-              </div>
-              
-              <div class="methodology-footer">
-                <p><strong>Última actualización:</strong> Diciembre 2024</p>
-                <p><strong>Próxima revisión:</strong> Junio 2025</p>
-                <p><strong>Contacto técnico:</strong> metodologia@hermosillotreemap.mx</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ============================================================================ -->
     <!-- SECCIÓN: APRENDER -->
     <!-- ============================================================================ -->
